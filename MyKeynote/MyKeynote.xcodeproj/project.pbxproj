@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC642A64DD630047580C /* AppDelegate.swift */; };
+		F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC662A64DD630047580C /* SceneDelegate.swift */; };
+		F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC682A64DD630047580C /* KeynoteViewController.swift */; };
+		F4AEBC6E2A64DD640047580C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AEBC6D2A64DD640047580C /* Assets.xcassets */; };
+		F4AEBC712A64DD640047580C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AEBC6F2A64DD640047580C /* LaunchScreen.storyboard */; };
+		F4AEBC7C2A64DD640047580C /* MyKeynoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC7B2A64DD640047580C /* MyKeynoteTests.swift */; };
+		F4AEBC862A64DD640047580C /* MyKeynoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC852A64DD640047580C /* MyKeynoteUITests.swift */; };
+		F4AEBC882A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */; };
+		F4AEBC9B2A65009E0047580C /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9A2A65009E0047580C /* RGB.swift */; };
+		F4AEBC9E2A6502A70047580C /* RGBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9D2A6502A70047580C /* RGBValue.swift */; };
+		F4AEBCA02A6525090047580C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9F2A6525090047580C /* Point.swift */; };
+		F4AEBCA22A6525950047580C /* Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA12A6525950047580C /* Alpha.swift */; };
+		F4AEBCA42A6525E90047580C /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA32A6525E90047580C /* Slide.swift */; };
+		F4AEBCA62A652FEC0047580C /* SquareSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA52A652FEC0047580C /* SquareSlide.swift */; };
+		F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA82A65354A0047580C /* SlideFactory.swift */; };
+		F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCAB2A6535820047580C /* SlideCreatable.swift */; };
+		F4AEBCAE2A65478E0047580C /* SlideID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCAD2A65478E0047580C /* SlideID.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4AEBC782A64DD640047580C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AEBC592A64DD630047580C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4AEBC602A64DD630047580C;
+			remoteInfo = MyKeynote;
+		};
+		F4AEBC822A64DD640047580C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AEBC592A64DD630047580C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4AEBC602A64DD630047580C;
+			remoteInfo = MyKeynote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4AEBC612A64DD630047580C /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AEBC642A64DD630047580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4AEBC662A64DD630047580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F4AEBC682A64DD630047580C /* KeynoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeynoteViewController.swift; sourceTree = "<group>"; };
+		F4AEBC6D2A64DD640047580C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4AEBC702A64DD640047580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4AEBC722A64DD640047580C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AEBC772A64DD640047580C /* MyKeynoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AEBC7B2A64DD640047580C /* MyKeynoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteTests.swift; sourceTree = "<group>"; };
+		F4AEBC812A64DD640047580C /* MyKeynoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AEBC852A64DD640047580C /* MyKeynoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITests.swift; sourceTree = "<group>"; };
+		F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4AEBC9A2A65009E0047580C /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
+		F4AEBC9D2A6502A70047580C /* RGBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValue.swift; sourceTree = "<group>"; };
+		F4AEBC9F2A6525090047580C /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		F4AEBCA12A6525950047580C /* Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpha.swift; sourceTree = "<group>"; };
+		F4AEBCA32A6525E90047580C /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		F4AEBCA52A652FEC0047580C /* SquareSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlide.swift; sourceTree = "<group>"; };
+		F4AEBCA82A65354A0047580C /* SlideFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideFactory.swift; sourceTree = "<group>"; };
+		F4AEBCAB2A6535820047580C /* SlideCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCreatable.swift; sourceTree = "<group>"; };
+		F4AEBCAD2A65478E0047580C /* SlideID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideID.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4AEBC5E2A64DD630047580C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AEBC742A64DD640047580C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AEBC7E2A64DD640047580C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4AEBC582A64DD630047580C = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC632A64DD630047580C /* MyKeynote */,
+				F4AEBC7A2A64DD640047580C /* MyKeynoteTests */,
+				F4AEBC842A64DD640047580C /* MyKeynoteUITests */,
+				F4AEBC622A64DD630047580C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4AEBC622A64DD630047580C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC612A64DD630047580C /* MyKeynote.app */,
+				F4AEBC772A64DD640047580C /* MyKeynoteTests.xctest */,
+				F4AEBC812A64DD640047580C /* MyKeynoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4AEBC632A64DD630047580C /* MyKeynote */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC942A64F08E0047580C /* Resource */,
+				F4AEBC952A64F0940047580C /* Source */,
+				F4AEBC722A64DD640047580C /* Info.plist */,
+			);
+			path = MyKeynote;
+			sourceTree = "<group>";
+		};
+		F4AEBC7A2A64DD640047580C /* MyKeynoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC7B2A64DD640047580C /* MyKeynoteTests.swift */,
+			);
+			path = MyKeynoteTests;
+			sourceTree = "<group>";
+		};
+		F4AEBC842A64DD640047580C /* MyKeynoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC852A64DD640047580C /* MyKeynoteUITests.swift */,
+				F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */,
+			);
+			path = MyKeynoteUITests;
+			sourceTree = "<group>";
+		};
+		F4AEBC942A64F08E0047580C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC6D2A64DD640047580C /* Assets.xcassets */,
+				F4AEBC6F2A64DD640047580C /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F4AEBC952A64F0940047580C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC962A64FF3D0047580C /* App */,
+				F4AEBC992A64FF740047580C /* Model */,
+				F4AEBC982A64FF700047580C /* View */,
+				F4AEBC972A64FF600047580C /* ViewController */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F4AEBC962A64FF3D0047580C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC642A64DD630047580C /* AppDelegate.swift */,
+				F4AEBC662A64DD630047580C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F4AEBC972A64FF600047580C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC682A64DD630047580C /* KeynoteViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4AEBC982A64FF700047580C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4AEBC992A64FF740047580C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBCAA2A6535520047580C /* Protocol */,
+				F4AEBC9A2A65009E0047580C /* RGB.swift */,
+				F4AEBC9D2A6502A70047580C /* RGBValue.swift */,
+				F4AEBC9F2A6525090047580C /* Point.swift */,
+				F4AEBCA12A6525950047580C /* Alpha.swift */,
+				F4AEBCA52A652FEC0047580C /* SquareSlide.swift */,
+				F4AEBCA82A65354A0047580C /* SlideFactory.swift */,
+				F4AEBCAD2A65478E0047580C /* SlideID.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4AEBCAA2A6535520047580C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBCA32A6525E90047580C /* Slide.swift */,
+				F4AEBCAB2A6535820047580C /* SlideCreatable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4AEBC602A64DD630047580C /* MyKeynote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AEBC8B2A64DD640047580C /* Build configuration list for PBXNativeTarget "MyKeynote" */;
+			buildPhases = (
+				F4AEBC5D2A64DD630047580C /* Sources */,
+				F4AEBC5E2A64DD630047580C /* Frameworks */,
+				F4AEBC5F2A64DD630047580C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyKeynote;
+			productName = MyKeynote;
+			productReference = F4AEBC612A64DD630047580C /* MyKeynote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4AEBC762A64DD640047580C /* MyKeynoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AEBC8E2A64DD640047580C /* Build configuration list for PBXNativeTarget "MyKeynoteTests" */;
+			buildPhases = (
+				F4AEBC732A64DD640047580C /* Sources */,
+				F4AEBC742A64DD640047580C /* Frameworks */,
+				F4AEBC752A64DD640047580C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4AEBC792A64DD640047580C /* PBXTargetDependency */,
+			);
+			name = MyKeynoteTests;
+			productName = MyKeynoteTests;
+			productReference = F4AEBC772A64DD640047580C /* MyKeynoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4AEBC802A64DD640047580C /* MyKeynoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AEBC912A64DD640047580C /* Build configuration list for PBXNativeTarget "MyKeynoteUITests" */;
+			buildPhases = (
+				F4AEBC7D2A64DD640047580C /* Sources */,
+				F4AEBC7E2A64DD640047580C /* Frameworks */,
+				F4AEBC7F2A64DD640047580C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4AEBC832A64DD640047580C /* PBXTargetDependency */,
+			);
+			name = MyKeynoteUITests;
+			productName = MyKeynoteUITests;
+			productReference = F4AEBC812A64DD640047580C /* MyKeynoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4AEBC592A64DD630047580C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					F4AEBC602A64DD630047580C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					F4AEBC762A64DD640047580C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = F4AEBC602A64DD630047580C;
+					};
+					F4AEBC802A64DD640047580C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = F4AEBC602A64DD630047580C;
+					};
+				};
+			};
+			buildConfigurationList = F4AEBC5C2A64DD630047580C /* Build configuration list for PBXProject "MyKeynote" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4AEBC582A64DD630047580C;
+			productRefGroup = F4AEBC622A64DD630047580C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4AEBC602A64DD630047580C /* MyKeynote */,
+				F4AEBC762A64DD640047580C /* MyKeynoteTests */,
+				F4AEBC802A64DD640047580C /* MyKeynoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4AEBC5F2A64DD630047580C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AEBC712A64DD640047580C /* LaunchScreen.storyboard in Resources */,
+				F4AEBC6E2A64DD640047580C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AEBC752A64DD640047580C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AEBC7F2A64DD640047580C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4AEBC5D2A64DD630047580C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */,
+				F4AEBCAE2A65478E0047580C /* SlideID.swift in Sources */,
+				F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */,
+				F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */,
+				F4AEBCA62A652FEC0047580C /* SquareSlide.swift in Sources */,
+				F4AEBCA22A6525950047580C /* Alpha.swift in Sources */,
+				F4AEBCA02A6525090047580C /* Point.swift in Sources */,
+				F4AEBC9E2A6502A70047580C /* RGBValue.swift in Sources */,
+				F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */,
+				F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */,
+				F4AEBC9B2A65009E0047580C /* RGB.swift in Sources */,
+				F4AEBCA42A6525E90047580C /* Slide.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AEBC732A64DD640047580C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AEBC7C2A64DD640047580C /* MyKeynoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AEBC7D2A64DD640047580C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AEBC882A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift in Sources */,
+				F4AEBC862A64DD640047580C /* MyKeynoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4AEBC792A64DD640047580C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4AEBC602A64DD630047580C /* MyKeynote */;
+			targetProxy = F4AEBC782A64DD640047580C /* PBXContainerItemProxy */;
+		};
+		F4AEBC832A64DD640047580C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4AEBC602A64DD630047580C /* MyKeynote */;
+			targetProxy = F4AEBC822A64DD640047580C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4AEBC6F2A64DD640047580C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4AEBC702A64DD640047580C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4AEBC892A64DD640047580C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4AEBC8A2A64DD640047580C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4AEBC8C2A64DD640047580C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyKeynote/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softeer.MyKeynote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F4AEBC8D2A64DD640047580C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyKeynote/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softeer.MyKeynote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		F4AEBC8F2A64DD640047580C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softeer.MyKeynoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyKeynote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyKeynote";
+			};
+			name = Debug;
+		};
+		F4AEBC902A64DD640047580C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softeer.MyKeynoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyKeynote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyKeynote";
+			};
+			name = Release;
+		};
+		F4AEBC922A64DD640047580C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softeer.MyKeynoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyKeynote;
+			};
+			name = Debug;
+		};
+		F4AEBC932A64DD640047580C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softeer.MyKeynoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyKeynote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4AEBC5C2A64DD630047580C /* Build configuration list for PBXProject "MyKeynote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AEBC892A64DD640047580C /* Debug */,
+				F4AEBC8A2A64DD640047580C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AEBC8B2A64DD640047580C /* Build configuration list for PBXNativeTarget "MyKeynote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AEBC8C2A64DD640047580C /* Debug */,
+				F4AEBC8D2A64DD640047580C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AEBC8E2A64DD640047580C /* Build configuration list for PBXNativeTarget "MyKeynoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AEBC8F2A64DD640047580C /* Debug */,
+				F4AEBC902A64DD640047580C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AEBC912A64DD640047580C /* Build configuration list for PBXNativeTarget "MyKeynoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AEBC922A64DD640047580C /* Debug */,
+				F4AEBC932A64DD640047580C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4AEBC592A64DD630047580C /* Project object */;
+}
