@@ -15,7 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = KeynoteViewController()
+        
+        let slideManager = SlideManager(factory: SlideFactory())
+        window?.rootViewController = KeynoteViewController(slideManager: slideManager)
         window?.makeKeyAndVisible()
     }
 

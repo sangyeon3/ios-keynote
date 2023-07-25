@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4753F4F92A66C60D00332249 /* KeynoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4F82A66C60D00332249 /* KeynoteView.swift */; };
+		4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FA2A677DEE00332249 /* SlideManager.swift */; };
+		4753F5002A67811500332249 /* SildeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FF2A67811500332249 /* SildeManagerTests.swift */; };
+		4753F50F2A67D15300332249 /* SYSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F50E2A67D15300332249 /* SYSize.swift */; };
+		4753F5112A6807EC00332249 /* SubSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5102A6807EC00332249 /* SubSlideView.swift */; };
+		4753F5152A6819F300332249 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5142A6819F300332249 /* UIColor+.swift */; };
+		4753F5192A68D37500332249 /* PropertySideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5182A68D37500332249 /* PropertySideBarView.swift */; };
+		47F269DE2A6E0DA300B6E2E3 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */; };
+		47F269E02A6E184100B6E2E3 /* ColorSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269DF2A6E184100B6E2E3 /* ColorSettingView.swift */; };
+		47F269E22A6E184A00B6E2E3 /* AlphaSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */; };
+		47F269E42A6E7E2900B6E2E3 /* SlideManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269E32A6E7E2900B6E2E3 /* SlideManageable.swift */; };
 		F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC642A64DD630047580C /* AppDelegate.swift */; };
 		F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC662A64DD630047580C /* SceneDelegate.swift */; };
 		F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC682A64DD630047580C /* KeynoteViewController.swift */; };
@@ -15,10 +26,9 @@
 		F4AEBC7C2A64DD640047580C /* MyKeynoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC7B2A64DD640047580C /* MyKeynoteTests.swift */; };
 		F4AEBC862A64DD640047580C /* MyKeynoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC852A64DD640047580C /* MyKeynoteUITests.swift */; };
 		F4AEBC882A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */; };
-		F4AEBC9B2A65009E0047580C /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9A2A65009E0047580C /* RGB.swift */; };
+		F4AEBC9B2A65009E0047580C /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9A2A65009E0047580C /* RGBColor.swift */; };
 		F4AEBC9E2A6502A70047580C /* RGBValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9D2A6502A70047580C /* RGBValue.swift */; };
-		F4AEBCA02A6525090047580C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9F2A6525090047580C /* Point.swift */; };
-		F4AEBCA22A6525950047580C /* Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA12A6525950047580C /* Alpha.swift */; };
+		F4AEBCA22A6525950047580C /* SYAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA12A6525950047580C /* SYAlpha.swift */; };
 		F4AEBCA42A6525E90047580C /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA32A6525E90047580C /* Slide.swift */; };
 		F4AEBCA62A652FEC0047580C /* SquareSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA52A652FEC0047580C /* SquareSlide.swift */; };
 		F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA82A65354A0047580C /* SlideFactory.swift */; };
@@ -44,6 +54,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4753F4F82A66C60D00332249 /* KeynoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeynoteView.swift; sourceTree = "<group>"; };
+		4753F4FA2A677DEE00332249 /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
+		4753F4FF2A67811500332249 /* SildeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SildeManagerTests.swift; sourceTree = "<group>"; };
+		4753F50E2A67D15300332249 /* SYSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYSize.swift; sourceTree = "<group>"; };
+		4753F5102A6807EC00332249 /* SubSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSlideView.swift; sourceTree = "<group>"; };
+		4753F5142A6819F300332249 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		4753F5182A68D37500332249 /* PropertySideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySideBarView.swift; sourceTree = "<group>"; };
+		47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		47F269DF2A6E184100B6E2E3 /* ColorSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingView.swift; sourceTree = "<group>"; };
+		47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaSettingView.swift; sourceTree = "<group>"; };
+		47F269E32A6E7E2900B6E2E3 /* SlideManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManageable.swift; sourceTree = "<group>"; };
 		F4AEBC612A64DD630047580C /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AEBC642A64DD630047580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AEBC662A64DD630047580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,10 +77,9 @@
 		F4AEBC812A64DD640047580C /* MyKeynoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyKeynoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AEBC852A64DD640047580C /* MyKeynoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITests.swift; sourceTree = "<group>"; };
 		F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F4AEBC9A2A65009E0047580C /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
+		F4AEBC9A2A65009E0047580C /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		F4AEBC9D2A6502A70047580C /* RGBValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBValue.swift; sourceTree = "<group>"; };
-		F4AEBC9F2A6525090047580C /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		F4AEBCA12A6525950047580C /* Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpha.swift; sourceTree = "<group>"; };
+		F4AEBCA12A6525950047580C /* SYAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYAlpha.swift; sourceTree = "<group>"; };
 		F4AEBCA32A6525E90047580C /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		F4AEBCA52A652FEC0047580C /* SquareSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlide.swift; sourceTree = "<group>"; };
 		F4AEBCA82A65354A0047580C /* SlideFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideFactory.swift; sourceTree = "<group>"; };
@@ -92,6 +112,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4753F5122A6819E000332249 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4753F5132A6819E700332249 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4753F5132A6819E700332249 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4753F5142A6819F300332249 /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4753F51C2A6BD6E800332249 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				4753F51D2A6BD76A00332249 /* Property */,
+				F4AEBCA32A6525E90047580C /* Slide.swift */,
+				F4AEBCAD2A65478E0047580C /* SlideID.swift */,
+				F4AEBCA82A65354A0047580C /* SlideFactory.swift */,
+				F4AEBCA52A652FEC0047580C /* SquareSlide.swift */,
+				4753F4FA2A677DEE00332249 /* SlideManager.swift */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
+		4753F51D2A6BD76A00332249 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEBC9A2A65009E0047580C /* RGBColor.swift */,
+				F4AEBC9D2A6502A70047580C /* RGBValue.swift */,
+				F4AEBCA12A6525950047580C /* SYAlpha.swift */,
+				4753F50E2A67D15300332249 /* SYSize.swift */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
 		F4AEBC582A64DD630047580C = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F4AEBC7B2A64DD640047580C /* MyKeynoteTests.swift */,
+				4753F4FF2A67811500332249 /* SildeManagerTests.swift */,
 			);
 			path = MyKeynoteTests;
 			sourceTree = "<group>";
@@ -155,6 +216,7 @@
 				F4AEBC992A64FF740047580C /* Model */,
 				F4AEBC982A64FF700047580C /* View */,
 				F4AEBC972A64FF600047580C /* ViewController */,
+				4753F5122A6819E000332249 /* Utils */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -179,6 +241,12 @@
 		F4AEBC982A64FF700047580C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4753F4F82A66C60D00332249 /* KeynoteView.swift */,
+				4753F5102A6807EC00332249 /* SubSlideView.swift */,
+				4753F5182A68D37500332249 /* PropertySideBarView.swift */,
+				47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */,
+				47F269DF2A6E184100B6E2E3 /* ColorSettingView.swift */,
+				47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,13 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				F4AEBCAA2A6535520047580C /* Protocol */,
-				F4AEBC9A2A65009E0047580C /* RGB.swift */,
-				F4AEBC9D2A6502A70047580C /* RGBValue.swift */,
-				F4AEBC9F2A6525090047580C /* Point.swift */,
-				F4AEBCA12A6525950047580C /* Alpha.swift */,
-				F4AEBCA52A652FEC0047580C /* SquareSlide.swift */,
-				F4AEBCA82A65354A0047580C /* SlideFactory.swift */,
-				F4AEBCAD2A65478E0047580C /* SlideID.swift */,
+				4753F51C2A6BD6E800332249 /* Slide */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,8 +263,8 @@
 		F4AEBCAA2A6535520047580C /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				F4AEBCA32A6525E90047580C /* Slide.swift */,
 				F4AEBCAB2A6535820047580C /* SlideCreatable.swift */,
+				47F269E32A6E7E2900B6E2E3 /* SlideManageable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -337,18 +399,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4753F5192A68D37500332249 /* PropertySideBarView.swift in Sources */,
 				F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */,
+				4753F50F2A67D15300332249 /* SYSize.swift in Sources */,
 				F4AEBCAE2A65478E0047580C /* SlideID.swift in Sources */,
 				F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */,
 				F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */,
 				F4AEBCA62A652FEC0047580C /* SquareSlide.swift in Sources */,
-				F4AEBCA22A6525950047580C /* Alpha.swift in Sources */,
-				F4AEBCA02A6525090047580C /* Point.swift in Sources */,
+				4753F5112A6807EC00332249 /* SubSlideView.swift in Sources */,
+				F4AEBCA22A6525950047580C /* SYAlpha.swift in Sources */,
+				47F269E22A6E184A00B6E2E3 /* AlphaSettingView.swift in Sources */,
+				47F269E42A6E7E2900B6E2E3 /* SlideManageable.swift in Sources */,
+				4753F5152A6819F300332249 /* UIColor+.swift in Sources */,
+				4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */,
+				47F269E02A6E184100B6E2E3 /* ColorSettingView.swift in Sources */,
 				F4AEBC9E2A6502A70047580C /* RGBValue.swift in Sources */,
 				F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */,
 				F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */,
-				F4AEBC9B2A65009E0047580C /* RGB.swift in Sources */,
+				47F269DE2A6E0DA300B6E2E3 /* SlideView.swift in Sources */,
+				F4AEBC9B2A65009E0047580C /* RGBColor.swift in Sources */,
 				F4AEBCA42A6525E90047580C /* Slide.swift in Sources */,
+				4753F4F92A66C60D00332249 /* KeynoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4753F5002A67811500332249 /* SildeManagerTests.swift in Sources */,
 				F4AEBC7C2A64DD640047580C /* MyKeynoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

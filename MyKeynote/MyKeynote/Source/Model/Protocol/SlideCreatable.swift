@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SlideCreatable {
-    func createSquareSlide(maxX: Double, maxY: Double) -> SquareSlide
+    func makeSlide<T: Slide>(type: T.Type) -> T
 }

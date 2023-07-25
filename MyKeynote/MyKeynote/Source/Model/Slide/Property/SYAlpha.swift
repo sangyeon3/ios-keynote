@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Alpha: Int, CustomStringConvertible {
+enum SYAlpha: Int, CustomStringConvertible {
     case one = 1, two, three, four, five, six, seven, eight, nine, ten
     
     var value: Int {
@@ -18,7 +18,7 @@ enum Alpha: Int, CustomStringConvertible {
         return "\(value)"
     }
     
-    static func randomAlpha() -> Alpha {
-        return Alpha(rawValue: Int.random(in: 1...10)) ?? .one
+    static func randomAlpha() -> SYAlpha {
+        return SYAlpha(rawValue: Int.random(in: 1...10)) ?? .one
     }
 }
