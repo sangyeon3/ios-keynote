@@ -15,6 +15,11 @@ protocol KeynoteViewDelegate: AnyObject {
     func slideAddButtonDidTapped()
 }
 
+protocol KeynoteViewDataSource: AnyObject {
+    func numberOfSlides() -> Int
+    func slideTypeImage(at index: Int) -> UIImage?
+}
+
 final class KeynoteView: UIView {
     
     enum Constants {
@@ -29,19 +34,20 @@ final class KeynoteView: UIView {
     private let propertySideBarView = PropertySideBarView()
     
     weak var delegate: KeynoteViewDelegate?
+    weak var dataSource: KeynoteViewDataSource?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupViews()
-        setupSubviewDelegate()
+        setupSubviewDelegateAndDataSource()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         setupViews()
-        setupSubviewDelegate()
+        setupSubviewDelegateAndDataSource()
     }
     
     func addSlideView(_ slide: Slide) {
@@ -110,10 +116,18 @@ extension KeynoteView: SlideViewDelegate {
     }
 }
 
-extension KeynoteView: SlideListSideBarViewDelegate {
+extension KeynoteView: SlideListSideBarViewDelegate, SlideListSideBarViewDataSource {
     
     func slideAddButtonDidTapped() {
         delegate?.slideAddButtonDidTapped()
+    }
+    
+    func numberOfSlides() -> Int {
+        dataSource?.numberOfSlides() ?? 0
+    }
+    
+    func slideTypeImage(at index: Int) -> UIImage? {
+        dataSource?.slideTypeImage(at: index)
     }
 }
 
@@ -126,8 +140,10 @@ extension KeynoteView {
         setupAutoLayout()
     }
     
-    private func setupSubviewDelegate() {
+    private func setupSubviewDelegateAndDataSource() {
         slideListSideBarView.delegate = self
+        slideListSideBarView.dataSource = self
+        
         propertySideBarView.delegate = self
     }
     

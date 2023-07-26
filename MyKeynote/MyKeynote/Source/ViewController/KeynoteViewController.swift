@@ -43,8 +43,10 @@ class KeynoteViewController: UIViewController {
     
     private func setupViews() {
         keynoteView.frame = view.frame
-        keynoteView.delegate = self
         view = keynoteView
+        
+        keynoteView.delegate = self
+        keynoteView.dataSource = self
     }
     
     private func addObservers() {
@@ -135,6 +137,20 @@ extension KeynoteViewController: KeynoteViewDelegate {
         colorPicker.modalPresentationStyle = .popover
         colorPicker.popoverPresentationController?.sourceItem = sender
         present(colorPicker, animated: false)
+    }
+}
+
+extension KeynoteViewController: KeynoteViewDataSource {
+    
+    func numberOfSlides() -> Int {
+        slideManager.numberOfSlide
+    }
+    
+    func slideTypeImage(at index: Int) -> UIImage? {
+        guard let slide = slideManager[index] else {
+            return .remove
+        }
+        return UIImage.slideTypeImage(slide)
     }
 }
 

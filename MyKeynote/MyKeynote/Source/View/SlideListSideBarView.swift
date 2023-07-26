@@ -13,6 +13,7 @@ protocol SlideListSideBarViewDelegate: AnyObject {
 
 protocol SlideListSideBarViewDataSource: AnyObject {
     func numberOfSlides() -> Int
+    func slideTypeImage(at index: Int) -> UIImage?
 }
 
 final class SlideListSideBarView: UIView {
@@ -103,7 +104,7 @@ final class SlideListSideBarView: UIView {
 extension SlideListSideBarView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return dataSource?.numberOfSlides() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,6 +114,9 @@ extension SlideListSideBarView: UITableViewDelegate, UITableViewDataSource {
         ) as? SlideListTableViewCell else {
             return SlideListTableViewCell()
         }
+    
+        let image = dataSource?.slideTypeImage(at: indexPath.row) ?? .remove
+        cell.bind(slideNumber: indexPath.row + 1, slideTypeImage: image)
         return cell
     }
     
