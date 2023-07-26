@@ -10,6 +10,7 @@ import Foundation
 protocol SlideManageable {
     var numberOfSlide: Int { get }
     
+    subscript(index: Int) -> Slide? { get }
     func slide(havingID id: String) -> Slide?
     @discardableResult
     func addSlide<T: Slide>(type: T.Type) -> Slide
