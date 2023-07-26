@@ -164,3 +164,14 @@ extension KeynoteViewController: UIColorPickerViewControllerDelegate {
         slideManager.changeBackgroundColorOf(havingID: idOfSelectedSlide, to: rgbColor)
     }
 }
+
+fileprivate extension UIImage {
+    static func slideTypeImage(_ slide: Slide) -> UIImage {
+        switch slide {
+        case is SquareSlide:
+            return UIImage(systemName: "rectangle.inset.filled") ?? .remove
+        default:
+            return UIImage(systemName: "square") ?? .remove
+        }
+    }
+}
