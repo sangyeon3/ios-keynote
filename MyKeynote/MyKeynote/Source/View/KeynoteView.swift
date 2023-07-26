@@ -113,9 +113,7 @@ extension KeynoteView: PropertySideBarViewDelegate {
 extension KeynoteView: SlideViewDelegate {
     
     func slideContentViewDidTapped(_ slideView: SlideView) {
-        guard let slideViewByID = slideViewsByID.first(where: { $0.value === slideView }) else {
-            return
-        }
+        guard let slideViewByID = slideViewsByID.first(where: { $0.value === slideView }) else { return }
         delegate?.slideContentViewDidTapped(slideID: slideViewByID.key)
     }
     
