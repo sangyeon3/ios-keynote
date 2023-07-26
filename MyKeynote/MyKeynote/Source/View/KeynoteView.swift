@@ -10,7 +10,7 @@ import UIKit
 protocol KeynoteViewDelegate: AnyObject {
     func backgroundColorButtonDidTapped(_ sender: UIButton)
     func alphaValueDidChanged(value: Int)
-    func subSlideViewDidTapped(slideID: String)
+    func slideContentViewDidTapped(slideID: String)
     func slideViewDidTapped()
     func slideAddButtonDidTapped()
 }
@@ -98,11 +98,11 @@ extension KeynoteView: PropertySideBarViewDelegate {
 
 extension KeynoteView: SlideViewDelegate {
     
-    func subSlideViewDidTapped(_ slideView: SlideView) {
+    func slideContentViewDidTapped(_ slideView: SlideView) {
         guard let slideViewByID = slideViewsByID.first(where: { $0.value === slideView }) else {
             return
         }
-        delegate?.subSlideViewDidTapped(slideID: slideViewByID.key)
+        delegate?.slideContentViewDidTapped(slideID: slideViewByID.key)
     }
     
     func slideViewDidTapped() {

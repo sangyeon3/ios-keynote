@@ -1,5 +1,5 @@
 //
-//  SubSlideView.swift
+//  SlideContentView.swift
 //  MyKeynote
 //
 //  Created by  sangyeon on 2023/07/19.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol SubSlideViewDelegate: AnyObject {
-    func subSlideViewDidTapped()
+protocol SlideContentViewDelegate: AnyObject {
+    func slideContentViewDidTapped()
 }
 
-final class SubSlideView: UIView {
+final class SlideContentView: UIView {
     
-    weak var delegate: SubSlideViewDelegate?
+    weak var delegate: SlideContentViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,7 +50,7 @@ final class SubSlideView: UIView {
     
 }
 
-extension SubSlideView {
+extension SlideContentView {
     
     private func setupViews(for slide: Slide) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -67,7 +67,7 @@ extension SubSlideView {
         guard gestureRecognizer.view != nil else { return }
             
         if gestureRecognizer.state == .ended {
-            delegate?.subSlideViewDidTapped()
+            delegate?.slideContentViewDidTapped()
         }
     }
 }

@@ -105,7 +105,7 @@ extension KeynoteViewController: KeynoteViewDelegate {
         slideManager.changeAlphaOf(havingID: idOfSelectedSlide, to: value)
     }
     
-    func subSlideViewDidTapped(slideID: String) {
+    func slideContentViewDidTapped(slideID: String) {
         guard let selectedSlide = slideManager.slide(havingID: slideID) else {
             return
         }
@@ -114,7 +114,6 @@ extension KeynoteViewController: KeynoteViewDelegate {
         keynoteView.addBorderToSlide(havingID: slideID)
         keynoteView.updateColorOf(havingID: slideID, to: UIColor(rgb: selectedSlide.backgroundColor))
         keynoteView.updateAlphaOf(havingID: slideID, to: selectedSlide.alpha.value)
-        
     }
     
     func slideViewDidTapped() {

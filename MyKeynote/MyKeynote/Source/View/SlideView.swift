@@ -8,13 +8,13 @@
 import UIKit
 
 protocol SlideViewDelegate: AnyObject {
-    func subSlideViewDidTapped(_ slideView: SlideView)
+    func slideContentViewDidTapped(_ slideView: SlideView)
     func slideViewDidTapped()
 }
 
 final class SlideView: UIView {
     
-    private var subSlideView: SubSlideView!
+    private var slideContentView: SlideContentView!
     
     weak var delegate: SlideViewDelegate?
     
@@ -36,26 +36,26 @@ final class SlideView: UIView {
     }
 
     func addBorder() {
-        subSlideView.addBorder()
+        slideContentView.addBorder()
     }
     
     func removeBorder() {
-        subSlideView.removeBorder()
+        slideContentView.removeBorder()
     }
     
     func updateBackgroundColor(to color: UIColor) {
-        subSlideView.updateBackgroundColor(to: color)
+        slideContentView.updateBackgroundColor(to: color)
     }
     
     func updateAlpha(to alpha: Int) {
-        subSlideView.updateAlpha(to: alpha)
+        slideContentView.updateAlpha(to: alpha)
     }
 }
 
-extension SlideView: SubSlideViewDelegate {
+extension SlideView: SlideContentViewDelegate {
     
-    func subSlideViewDidTapped() {
-        delegate?.subSlideViewDidTapped(self)
+    func slideContentViewDidTapped() {
+        delegate?.slideContentViewDidTapped(self)
     }
 }
 
@@ -66,7 +66,7 @@ extension SlideView {
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         
-        setupSubSlideView(for: slide)
+        setupSlideContentView(for: slide)
     }
     
     private func setupGestureRecognizer() {
@@ -74,16 +74,16 @@ extension SlideView {
         addGestureRecognizer(tapGestureRecognizer)
     }
     
-    private func setupSubSlideView(for slide: Slide) {
-        subSlideView = SubSlideView(frame: .zero, slide: slide)
-        subSlideView.delegate = self
+    private func setupSlideContentView(for slide: Slide) {
+        slideContentView = SlideContentView(frame: .zero, slide: slide)
+        slideContentView.delegate = self
         
-        addSubview(subSlideView)
+        addSubview(slideContentView)
         NSLayoutConstraint.activate([
-            subSlideView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            subSlideView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            subSlideView.widthAnchor.constraint(equalToConstant: slide.size.width),
-            subSlideView.heightAnchor.constraint(equalToConstant: slide.size.height)
+            slideContentView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            slideContentView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            slideContentView.widthAnchor.constraint(equalToConstant: slide.size.width),
+            slideContentView.heightAnchor.constraint(equalToConstant: slide.size.height)
         ])
     }
     
