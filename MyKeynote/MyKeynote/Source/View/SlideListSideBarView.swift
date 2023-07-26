@@ -44,6 +44,13 @@ final class SlideListSideBarView: UIView {
         setupUIProperties()
     }
     
+    func addSlide() {
+        let row = (dataSource?.numberOfSlides() ?? 1) - 1
+        let indexPath = IndexPath(row: row, section: 0)
+        slideTableView.insertRows(at: [indexPath], with: .automatic)
+        slideTableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
+    }
+    
     private func setupViews() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .systemGray5

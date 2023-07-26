@@ -62,6 +62,8 @@ final class KeynoteView: UIView {
             newSlideView.rightAnchor.constraint(equalTo: propertySideBarView.leftAnchor),
             newSlideView.heightAnchor.constraint(equalTo: newSlideView.widthAnchor, multiplier: Constants.backgroundViewRatio)
         ])
+        
+        slideListSideBarView.addSlide()
     }
     
     func addBorderToSlide(havingID id: String) {
