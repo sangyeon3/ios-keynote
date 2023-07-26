@@ -129,6 +129,17 @@ extension KeynoteViewController: KeynoteViewDelegate {
         slideManager.addSlide(type: SquareSlide.self)
     }
     
+    func slideCellDidSelected(at index: Int) {
+        if let idOfSelectedSlide {
+            keynoteView.removeBorderToSlide(havingID: idOfSelectedSlide)
+            keynoteView.disableAllProperty()
+        }
+        
+        guard let selectedSlide = slideManager[index] else { return }
+        idOfSelectedSlide = selectedSlide.id
+        keynoteView.showSlideView(havingID: selectedSlide.id)
+    }
+    
     private func presentColorPicker(_ sender: UIButton) {
         let colorPicker = UIColorPickerViewController()
         colorPicker.title = "배경색"

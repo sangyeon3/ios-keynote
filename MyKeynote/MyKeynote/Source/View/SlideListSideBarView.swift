@@ -9,6 +9,7 @@ import UIKit
 
 protocol SlideListSideBarViewDelegate: AnyObject {
     func slideAddButtonDidTapped()
+    func slideCellDidSelected(at index: Int)
 }
 
 protocol SlideListSideBarViewDataSource: AnyObject {
@@ -73,6 +74,10 @@ extension SlideListSideBarView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.slideCellDidSelected(at: indexPath.row)
     }
 }
 

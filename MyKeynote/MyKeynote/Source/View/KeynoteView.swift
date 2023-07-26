@@ -13,6 +13,7 @@ protocol KeynoteViewDelegate: AnyObject {
     func slideContentViewDidTapped(slideID: String)
     func slideViewDidTapped()
     func slideAddButtonDidTapped()
+    func slideCellDidSelected(at index: Int)
 }
 
 protocol KeynoteViewDataSource: AnyObject {
@@ -64,6 +65,11 @@ final class KeynoteView: UIView {
         ])
         
         slideListSideBarView.addSlide()
+    }
+    
+    func showSlideView(havingID slideID: String) {
+        guard let slideView = slideViewsByID[slideID] else { return }
+        self.bringSubviewToFront(slideView)
     }
     
     func addBorderToSlide(havingID id: String) {
@@ -122,6 +128,10 @@ extension KeynoteView: SlideListSideBarViewDelegate, SlideListSideBarViewDataSou
     
     func slideAddButtonDidTapped() {
         delegate?.slideAddButtonDidTapped()
+    }
+    
+    func slideCellDidSelected(at index: Int) {
+        delegate?.slideCellDidSelected(at: index)
     }
     
     func numberOfSlides() -> Int {
