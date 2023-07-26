@@ -91,9 +91,7 @@ final class SlideListSideBarView: UIView {
         slideTableView.translatesAutoresizingMaskIntoConstraints = false
         slideTableView.dataSource = self
         slideTableView.delegate = self
-        slideTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        
-        slideTableView.backgroundColor = .yellow
+        slideTableView.register(SlideListTableViewCell.self, forCellReuseIdentifier: SlideListTableViewCell.identifier)
     }
     
     @objc private func slideAddButtonDidTapped(_ sender: UIButton) {
@@ -108,9 +106,16 @@ extension SlideListSideBarView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.backgroundColor = .red
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: SlideListTableViewCell.identifier,
+            for: indexPath
+        ) as? SlideListTableViewCell else {
+            return SlideListTableViewCell()
+        }
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
