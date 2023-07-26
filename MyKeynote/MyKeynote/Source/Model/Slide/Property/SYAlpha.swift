@@ -7,18 +7,47 @@
 
 import Foundation
 
-enum SYAlpha: Int, CustomStringConvertible {
-    case one = 1, two, three, four, five, six, seven, eight, nine, ten
+struct SYAlpha: CustomStringConvertible {
+
+    private static let minValue = 1
+    private static let maxValue = 10
+    private static let range = minValue...maxValue
     
-    var value: Int {
-        return rawValue
+    private(set) var value: Int
+    
+    init?(value: Int) {
+        if !(SYAlpha.range ~= value) {
+            return nil
+        }
+        self.value = value
+    }
+    
+    /// alpha 값이 1인 SYAlpha
+    static var minAlpha: SYAlpha {
+        SYAlpha(value: minValue)!
+    }
+    
+    /// alpha 값이 10인 SYAlpha
+    static var maxAlpha: SYAlpha {
+        SYAlpha(value: maxValue)!
     }
     
     var description: String {
         return "\(value)"
     }
     
+    /// newValue 값으로 value를 수정. 만약 범위를 벗어날 경우 가장 가까운 값으로 업데이트
+    mutating func update(to newValue: Int) {
+        if SYAlpha.range ~= newValue {
+            value = newValue
+        } else if SYAlpha.minValue > newValue {
+            value = SYAlpha.minValue
+        } else {
+            value = SYAlpha.maxValue
+        }
+    }
+    
     static func randomAlpha() -> SYAlpha {
-        return SYAlpha(rawValue: Int.random(in: 1...10)) ?? .one
+        return SYAlpha(value: Int.random(in: SYAlpha.minValue...SYAlpha.maxValue)) ?? .minAlpha
     }
 }

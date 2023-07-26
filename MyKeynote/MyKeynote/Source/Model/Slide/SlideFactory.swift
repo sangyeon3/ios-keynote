@@ -13,11 +13,13 @@ final class SlideFactory: SlideCreatable {
         let id = SlideID.randomId()
         let width = Double(Int.random(in: 100...400))
         let color = RGBColor.randomRGB()
+        let alpha = SYAlpha.randomAlpha()
 
         return T(
             id: id,
             width: width,
-            color: color
+            color: color,
+            alpha: alpha
         )
     }
 }

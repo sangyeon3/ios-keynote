@@ -43,21 +43,19 @@ final class AlphaSettingView: UIView {
         setupProperties()
     }
     
-    func updateView(for slide: Slide) {
-        valueLabel.alpha = 0.5
-        alphaStepper.isEnabled = slide.isSelected
-        if slide.isSelected {
-            valueLabel.text = String(slide.alpha.rawValue)
-            alphaStepper.value = Double(slide.alpha.rawValue)
-            valueLabel.alpha = 1.0
-        }
+    func update(to alphaValue: Int) {
+        valueLabel.alpha = 1.0
+        alphaStepper.isEnabled = true
+        
+        valueLabel.text = String(alphaValue)
+        alphaStepper.value = Double(alphaValue)
     }
     
-    @objc private func stepperValueDidChanged(_ sender: UIStepper) {
-        let newValue = Int(sender.value)
-        valueLabel.text = "\(newValue)"
-        delegate?.alphaValueDidChanged(value: newValue)
+    func disabled() {
+        valueLabel.alpha = 0.5
+        alphaStepper.isEnabled = false
     }
+    
 }
 
 extension AlphaSettingView {
@@ -128,5 +126,11 @@ extension AlphaSettingView {
         alphaStepper.addTarget(self, action: #selector(stepperValueDidChanged(_:)), for: .valueChanged)
         alphaStepper.translatesAutoresizingMaskIntoConstraints = false
         alphaStepper.isEnabled = false
+    }
+    
+    @objc private func stepperValueDidChanged(_ sender: UIStepper) {
+        let newValue = Int(sender.value)
+        valueLabel.text = "\(newValue)"
+        delegate?.alphaValueDidChanged(value: newValue)
     }
 }

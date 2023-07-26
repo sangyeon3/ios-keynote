@@ -17,6 +17,8 @@ class KeynoteViewController: UIViewController {
     
     private var slideManager: SlideManageable
     
+    private var idOfSelectedSlide: String?
+    
     init(slideManager: SlideManageable) {
         self.slideManager = slideManager
         super.init(nibName: nil, bundle: nil)
@@ -27,8 +29,6 @@ class KeynoteViewController: UIViewController {
         super.init(coder: coder)
     }
     
-    private var selectedSlide: Slide?
-    
     override func loadView() {
         super.loadView()
         
@@ -38,7 +38,7 @@ class KeynoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        temp()
+        addObservers()
     }
     
     private func setupViews() {
@@ -47,10 +47,50 @@ class KeynoteViewController: UIViewController {
         view = keynoteView
     }
     
-    private func temp() {
-        let newSlide = slideManager.addSlide(type: SquareSlide.self)
-        newSlide.delegate = self
-        keynoteView.addSlideView(newSlide)
+    private func addObservers() {
+        NotificationCenter.default.addObserver(
+            forName: SlideManager.Notifications.backgroundColorOfSlideDidChanged,
+            object: nil,
+            queue: .main,
+            using: { [weak self] notification in
+                guard let self,
+                      let idOfSelectedSlide,
+                      let userInfo = notification.userInfo,
+                      let color = userInfo[SlideManager.UserInfoKey.color] as? RGBColor else {
+                    return
+                }
+                keynoteView.updateColorOf(havingID: idOfSelectedSlide, to: UIColor(rgb: color))
+            }
+        )
+        
+        NotificationCenter.default.addObserver(
+            forName: SlideManager.Notifications.alphaOfSlideDidChanged,
+            object: nil,
+            queue: .main,
+            using: { [weak self] notification in
+                guard let self,
+                      let idOfSelectedSlide,
+                      let userInfo = notification.userInfo,
+                      let alpha = userInfo[SlideManager.UserInfoKey.alpha] as? Int else {
+                    return
+                }
+                keynoteView.updateAlphaOf(havingID: idOfSelectedSlide, to: alpha)
+            }
+        )
+        
+        NotificationCenter.default.addObserver(
+            forName: SlideManager.Notifications.slideDidAdded,
+            object: nil,
+            queue: .main,
+            using: { [weak self] notification in
+                guard let self,
+                      let userInfo = notification.userInfo,
+                      let newSlide = userInfo[SlideManager.UserInfoKey.newSlide] as? Slide else {
+                    return
+                }
+                keynoteView.addSlideView(newSlide)
+            }
+        )
     }
 }
 
@@ -61,30 +101,37 @@ extension KeynoteViewController: KeynoteViewDelegate {
     }
     
     func alphaValueDidChanged(value: Int) {
-        guard let selectedSlide else { return }
-        selectedSlide.changeAlpha(to: value)
+        guard let idOfSelectedSlide else { return }
+        slideManager.changeAlphaOf(havingID: idOfSelectedSlide, to: value)
     }
     
     func subSlideViewDidTapped(slideID: String) {
         guard let selectedSlide = slideManager.slide(havingID: slideID) else {
             return
         }
+        self.idOfSelectedSlide = slideID
         
-        selectedSlide.isSelected = true
-        self.selectedSlide = selectedSlide
-        keynoteView.updateView(for: selectedSlide)
+        keynoteView.addBorderToSlide(havingID: slideID)
+        keynoteView.updateColorOf(havingID: slideID, to: UIColor(rgb: selectedSlide.backgroundColor))
+        keynoteView.updateAlphaOf(havingID: slideID, to: selectedSlide.alpha.value)
+        
     }
     
     func slideViewDidTapped() {
-        selectedSlide?.isSelected = false
-        guard let selectedSlide else { return }
-        keynoteView.updateView(for: selectedSlide)
-        self.selectedSlide = nil
+        guard let idOfSelectedSlide else { return }
+        keynoteView.removeBorderToSlide(havingID: idOfSelectedSlide)
+        keynoteView.disableAllProperty()
+        self.idOfSelectedSlide = nil
+    }
+    
+    func slideAddButtonDidTapped() {
+        slideManager.addSlide(type: SquareSlide.self)
     }
     
     private func presentColorPicker(_ sender: UIButton) {
         let colorPicker = UIColorPickerViewController()
         colorPicker.title = "배경색"
+        colorPicker.supportsAlpha = false
         colorPicker.delegate = self
         colorPicker.modalPresentationStyle = .popover
         colorPicker.popoverPresentationController?.sourceItem = sender
@@ -95,16 +142,10 @@ extension KeynoteViewController: KeynoteViewDelegate {
 extension KeynoteViewController: UIColorPickerViewControllerDelegate {
 
     func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
-        selectedSlide?.changeColor(to: color.rgbColor)
-    }
-}
-
-extension KeynoteViewController: SlideDelegate {
-    func backgroundColorDidChanged(_ slide: Slide) {
-        keynoteView.updateView(for: slide)
-    }
-    
-    func alphaDidChanged(_ slide: Slide) {
-        keynoteView.updateView(for: slide)
+        guard let idOfSelectedSlide,
+              let rgbColor = color.rgbColor else {
+            return
+        }
+        slideManager.changeBackgroundColorOf(havingID: idOfSelectedSlide, to: rgbColor)
     }
 }

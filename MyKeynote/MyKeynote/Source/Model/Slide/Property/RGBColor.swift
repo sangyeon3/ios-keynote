@@ -8,24 +8,38 @@
 import Foundation
 
 struct RGBColor: CustomStringConvertible {
-    @RGBValue var red: Int
-    @RGBValue var green: Int
-    @RGBValue var blue: Int
+    
+    static private let range = 0...255
+    
+    var red: Int
+    var green: Int
+    var blue: Int
     var alpha: SYAlpha
     
-    init(red: Int, green: Int, blue: Int, alpha: SYAlpha) {
-        self.alpha = alpha
+    init?(red: Int, green: Int, blue: Int, alpha: SYAlpha) {
+        if !(RGBColor.range ~= red && RGBColor.range ~= green && RGBColor.range ~= blue) {
+            return nil
+        }
+        
         self.red = red
         self.green = green
         self.blue = blue
+        self.alpha = alpha
+    }
+    
+    private init() {
+        self.red = 0
+        self.green = 0
+        self.blue = 0
+        self.alpha = .maxAlpha
+    }
+    
+    static var black: RGBColor {
+        RGBColor()
     }
     
     var description: String {
-        "R:\(red), G:\(green), B:\(blue), Alpha: \(alpha)"
-    }
-    
-    var hexString: String {
-        return "#\(String(format: "%02X", red))\(String(format: "%02X", green))\(String(format: "%02X", blue))"
+        "R:\(red), G:\(green), B:\(blue)"
     }
     
     static func randomRGB() -> RGBColor {
@@ -37,7 +51,7 @@ struct RGBColor: CustomStringConvertible {
             red: randomRGBValue(),
             green: randomRGBValue(),
             blue: randomRGBValue(),
-            alpha: SYAlpha.randomAlpha()
-        )
+            alpha: .maxAlpha
+        ) ?? .black
     }
 }

@@ -7,33 +7,22 @@
 
 import Foundation
 
-protocol SlideDelegate: AnyObject {
-    func backgroundColorDidChanged(_ slide: Slide)
-    func alphaDidChanged(_ slide: Slide)
-}
-
 class Slide: CustomStringConvertible {
+    
     let id: String
     var size: SYSize
-    var color: RGBColor
+    var backgroundColor: RGBColor
+    var alpha: SYAlpha
     
-    var isSelected: Bool
-    
-    var alpha: SYAlpha {
-        color.alpha
-    }
-    
-    weak var delegate: SlideDelegate?
-    
-    required init(id: String, width: Double, color: RGBColor) {
+    required init(id: String, width: Double, color: RGBColor, alpha: SYAlpha) {
         self.id = id
         self.size = SYSize(width: width, height: width * 0.75)
-        self.color = color
-        self.isSelected = false
+        self.backgroundColor = color
+        self.alpha = alpha
     }
     
     var description: String {
-        "\(Self.self) (\(id)), Size: \(size.width), \(color)"
+        "\(Self.self) (\(id)), Size: \(size.width), \(backgroundColor), Alpha: \(alpha)"
     }
 
     func isEqual(with other: Slide) -> Bool {
@@ -41,15 +30,10 @@ class Slide: CustomStringConvertible {
     }
     
     func changeColor(to newColor: RGBColor) {
-        color = newColor
-        delegate?.backgroundColorDidChanged(self)
+        backgroundColor = newColor
     }
     
     func changeAlpha(to value: Int) {
-        guard let alpha = SYAlpha(rawValue: value) else {
-            return
-        }
-        color.alpha = alpha
-        delegate?.alphaDidChanged(self)
+        alpha.update(to: value)
     }
 }

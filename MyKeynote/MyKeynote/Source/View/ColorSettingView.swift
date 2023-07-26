@@ -41,17 +41,15 @@ final class ColorSettingView: UIView {
         setupProperties()
     }
     
-    func updateView(for slide: Slide) {
-        colorButton.isEnabled = slide.isSelected
-        colorButton.alpha = 0.5
-        if slide.isSelected {
-            colorButton.setTitle(slide.color.hexString, for: .normal)
-            colorButton.alpha = 1
-        }
+    func updateColorLabel(to hexColor: String) {
+        colorButton.isEnabled = true
+        colorButton.alpha = 1
+        colorButton.setTitle(hexColor, for: .normal)
     }
     
-    @objc private func colorButtonDidTouched(_ sender: UIButton) {
-        delegate?.colorButtonDidTapped(sender)
+    func disabled() {
+        colorButton.isEnabled = false
+        colorButton.alpha = 0.5
     }
 }
 
@@ -107,5 +105,9 @@ extension ColorSettingView {
         
         colorButton.isEnabled = false
         colorButton.alpha = 0.5
+    }
+    
+    @objc private func colorButtonDidTouched(_ sender: UIButton) {
+        delegate?.colorButtonDidTapped(sender)
     }
 }

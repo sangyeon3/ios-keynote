@@ -39,10 +39,18 @@ final class PropertySideBarView: UIView {
         setupViews()
         setupSubviewDelegate()
     }
+
+    func updateColorLabel(to hexColor: String) {
+        backgroundColorSettingView.updateColorLabel(to: hexColor)
+    }
     
-    func updateView(for slide: Slide) {
-        backgroundColorSettingView.updateView(for: slide)
-        alphaSettingView.updateView(for: slide)
+    func updateAlpha(to alphaValue: Int) {
+        alphaSettingView.update(to: alphaValue)
+    }
+    
+    func disableAllProperty() {
+        backgroundColorSettingView.disabled()
+        alphaSettingView.disabled()
     }
 }
 

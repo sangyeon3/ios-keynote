@@ -8,25 +8,21 @@
 import UIKit
 
 protocol SlideViewDelegate: AnyObject {
-    func subSlideViewDidTapped(slideID: String)
+    func subSlideViewDidTapped(_ slideView: SlideView)
     func slideViewDidTapped()
 }
 
 final class SlideView: UIView {
-    
-    let slideID: String
     
     private var subSlideView: SubSlideView!
     
     weak var delegate: SlideViewDelegate?
     
     private override init(frame: CGRect) {
-        slideID = ""
         super.init(frame: frame)
     }
     
     init(frame: CGRect, slide: Slide) {
-        slideID = slide.id
         super.init(frame: frame)
         
         setupViews(for: slide)
@@ -34,22 +30,32 @@ final class SlideView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        slideID = ""
         super.init(coder: coder)
         
         setupGestureRecognizer()
     }
-    
-    func updateView(for slide: Slide) {
-        subSlideView.update(for: slide)
-    }
 
+    func addBorder() {
+        subSlideView.addBorder()
+    }
+    
+    func removeBorder() {
+        subSlideView.removeBorder()
+    }
+    
+    func updateBackgroundColor(to color: UIColor) {
+        subSlideView.updateBackgroundColor(to: color)
+    }
+    
+    func updateAlpha(to alpha: Int) {
+        subSlideView.updateAlpha(to: alpha)
+    }
 }
 
 extension SlideView: SubSlideViewDelegate {
     
     func subSlideViewDidTapped() {
-        delegate?.subSlideViewDidTapped(slideID: slideID)
+        delegate?.subSlideViewDidTapped(self)
     }
 }
 

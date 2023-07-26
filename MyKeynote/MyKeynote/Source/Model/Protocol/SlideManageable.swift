@@ -11,5 +11,8 @@ protocol SlideManageable {
     var numberOfSlide: Int { get }
     
     func slide(havingID id: String) -> Slide?
-    mutating func addSlide<T: Slide>(type: T.Type) -> Slide
+    @discardableResult
+    func addSlide<T: Slide>(type: T.Type) -> Slide
+    func changeBackgroundColorOf(havingID slideID: String, to color: RGBColor)
+    func changeAlphaOf(havingID slideID: String, to alphaValue: Int)
 }
