@@ -86,10 +86,11 @@ extension SlideListTableViewCell {
     }
     
     private func setupSlideTypeImageView() {
-        slideTypeImageView.image = UIImage(systemName: "x.square")
+        slideTypeImageView.image = .remove
         slideTypeImageView.tintColor = .gray
         slideTypeImageView.backgroundColor = .systemGray2
         slideTypeImageView.layer.cornerRadius = 5
+        slideTypeImageView.contentMode = .scaleAspectFit
         slideTypeImageView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
