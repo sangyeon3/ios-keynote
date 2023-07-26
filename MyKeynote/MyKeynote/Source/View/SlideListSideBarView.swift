@@ -92,6 +92,7 @@ final class SlideListSideBarView: UIView {
         slideTableView.dataSource = self
         slideTableView.delegate = self
         slideTableView.register(SlideListTableViewCell.self, forCellReuseIdentifier: SlideListTableViewCell.identifier)
+        slideTableView.backgroundColor = slideTableView.backgroundColor?.withAlphaComponent(0)
     }
     
     @objc private func slideAddButtonDidTapped(_ sender: UIButton) {
