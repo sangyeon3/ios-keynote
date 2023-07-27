@@ -42,9 +42,7 @@ class SlideManager: SlideManageable {
         slides.first(where: { $0.id == id })
     }
     
-    @discardableResult
-    func addSlide<T: Slide>(type: T.Type) -> Slide {
-        let newSlide = factory.makeSlide(type: type)
+    func addSlide(_ newSlide: BaseSlide) {
         slides.append(newSlide)
         
         NotificationCenter.default.post(
@@ -52,8 +50,6 @@ class SlideManager: SlideManageable {
             object: self,
             userInfo: [UserInfoKey.element: newSlide]
         )
-        
-        return newSlide
     }
     
     func changeBackgroundColorOf(havingID slideID: String, to color: RGBColor) {
