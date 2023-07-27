@@ -77,10 +77,10 @@ class KeynoteViewController: UIViewController {
                 guard let self,
                       let idOfSelectedSlide,
                       let userInfo = notification.userInfo,
-                      let alpha = userInfo[SlideManager.UserInfoKey.element] as? Int else {
+                      let alpha = userInfo[SlideManager.UserInfoKey.element] as? SYAlpha else {
                     return
                 }
-                keynoteView.updateAlphaOf(havingID: idOfSelectedSlide, to: alpha)
+                keynoteView.updateAlphaOf(havingID: idOfSelectedSlide, to: alpha.value)
             }
         )
         

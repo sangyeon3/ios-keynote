@@ -57,7 +57,7 @@ class SlideManager: SlideManageable {
     }
     
     func changeBackgroundColorOf(havingID slideID: String, to color: RGBColor) {
-        guard let slide = slide(havingID: slideID) else {
+        guard let slide = slide(havingID: slideID) as? Colorful else {
             return
         }
         slide.changeColor(to: color)
@@ -70,15 +70,16 @@ class SlideManager: SlideManageable {
     }
     
     func changeAlphaOf(havingID slideID: String, to alphaValue: Int) {
-        guard let slide = slide(havingID: slideID) else {
+        guard let slide = slide(havingID: slideID) as? AlphaAdaptable,
+              let alpha = SYAlpha(value: alphaValue) else {
             return
         }
-        slide.changeAlpha(to: alphaValue)
+        slide.changeAlpha(to: alpha)
         
         NotificationCenter.default.post(
             name: Notifications.alphaOfSlideDidChanged,
             object: self,
-            userInfo: [UserInfoKey.element: alphaValue]
+            userInfo: [UserInfoKey.element: alpha]
         )
     }
 }
