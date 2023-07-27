@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SlideCreatable {
-    func makeSlide<T: Slide>(type: T.Type) -> T
+    func makeSquareSlide() -> SquareSlide
+    func makePhotoSlide() -> PhotoSlide
 }

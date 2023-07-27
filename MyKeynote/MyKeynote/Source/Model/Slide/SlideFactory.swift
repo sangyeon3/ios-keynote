@@ -9,17 +9,17 @@ import Foundation
 
 final class SlideFactory: SlideCreatable {
     
-    func makeSlide<T: Slide>(type: T.Type) -> T {
+    func makeSquareSlide() -> SquareSlide {
         let id = SlideID.randomId()
-        let width = Double(Int.random(in: 100...400))
+        let side = Double(Int.random(in: 100...400))
         let color = RGBColor.randomRGB()
         let alpha = SYAlpha.randomAlpha()
-
-        return T(
-            id: id,
-            width: width,
-            color: color,
-            alpha: alpha
-        )
+        
+        return SquareSlide(id: id, side: side, color: color, alpha: alpha)
+    }
+    
+    func makePhotoSlide() -> PhotoSlide {
+        let id = SlideID.randomId()
+        return PhotoSlide(id: id)
     }
 }
