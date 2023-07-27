@@ -16,3 +16,5 @@ extension SlideIdentifiable {
         self.id == other.id
     }
 }
+
+protocol BaseSlide: SlideIdentifiable, CustomStringConvertible {}
