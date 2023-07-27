@@ -52,7 +52,7 @@ class KeynoteViewController: UIViewController {
     private func addObservers() {
         NotificationCenter.default.addObserver(
             forName: SlideManager.Notifications.backgroundColorOfSlideDidChanged,
-            object: nil,
+            object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
@@ -67,7 +67,7 @@ class KeynoteViewController: UIViewController {
         
         NotificationCenter.default.addObserver(
             forName: SlideManager.Notifications.alphaOfSlideDidChanged,
-            object: nil,
+            object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
@@ -82,7 +82,7 @@ class KeynoteViewController: UIViewController {
         
         NotificationCenter.default.addObserver(
             forName: SlideManager.Notifications.slideDidAdded,
-            object: nil,
+            object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
