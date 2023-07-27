@@ -32,11 +32,12 @@ final class PhotoSlideView: BaseSlideView, SlideViewImageChangeable, SlideViewAl
     }
     
     func changeSlideImage(to image: UIImage) {
-        <#code#>
+        guard let contentView = contentView as? UIImageView else { return }
+        contentView.image = image
     }
     
     func changeAlpha(to value: Int) {
-        <#code#>
+        contentView?.alpha = CGFloat(value) / 10
     }
     
     private func setupViews(image: UIImage?) {
