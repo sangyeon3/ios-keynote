@@ -68,7 +68,7 @@ extension SlideListSideBarView: UITableViewDelegate, UITableViewDataSource {
         }
     
         let image = dataSource?.slideTypeImage(at: indexPath.row) ?? .remove
-        cell.bind(slideNumber: indexPath.row + 1, slideTypeImage: image)
+        cell.configure(slideNumber: indexPath.row + 1, slideTypeImage: image)
         return cell
     }
     

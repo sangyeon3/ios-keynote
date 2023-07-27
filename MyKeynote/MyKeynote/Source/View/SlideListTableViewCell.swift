@@ -35,7 +35,7 @@ final class SlideListTableViewCell: UITableViewCell {
         setupUIProperties()
     }
     
-    func bind(slideNumber: Int, slideTypeImage: UIImage) {
+    func configure(slideNumber: Int, slideTypeImage: UIImage) {
         slideNumberLabel.text = String(slideNumber)
         slideTypeImageView.image = slideTypeImage
     }
