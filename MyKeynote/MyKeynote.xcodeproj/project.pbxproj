@@ -11,7 +11,7 @@
 		4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FA2A677DEE00332249 /* SlideManager.swift */; };
 		4753F5002A67811500332249 /* SildeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FF2A67811500332249 /* SildeManagerTests.swift */; };
 		4753F50F2A67D15300332249 /* SYSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F50E2A67D15300332249 /* SYSize.swift */; };
-		4753F5112A6807EC00332249 /* SubSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5102A6807EC00332249 /* SubSlideView.swift */; };
+		4753F5112A6807EC00332249 /* SlideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5102A6807EC00332249 /* SlideContentView.swift */; };
 		4753F5152A6819F300332249 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5142A6819F300332249 /* UIColor+.swift */; };
 		4753F5192A68D37500332249 /* PropertySideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5182A68D37500332249 /* PropertySideBarView.swift */; };
 		47F269DE2A6E0DA300B6E2E3 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */; };
@@ -19,6 +19,7 @@
 		47F269E22A6E184A00B6E2E3 /* AlphaSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */; };
 		47F269E42A6E7E2900B6E2E3 /* SlideManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269E32A6E7E2900B6E2E3 /* SlideManageable.swift */; };
 		47F269E62A70B14200B6E2E3 /* SlideListSideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269E52A70B14200B6E2E3 /* SlideListSideBarView.swift */; };
+		47F269E82A710B3600B6E2E3 /* SlideListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269E72A710B3600B6E2E3 /* SlideListTableViewCell.swift */; };
 		F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC642A64DD630047580C /* AppDelegate.swift */; };
 		F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC662A64DD630047580C /* SceneDelegate.swift */; };
 		F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC682A64DD630047580C /* KeynoteViewController.swift */; };
@@ -58,7 +59,7 @@
 		4753F4FA2A677DEE00332249 /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		4753F4FF2A67811500332249 /* SildeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SildeManagerTests.swift; sourceTree = "<group>"; };
 		4753F50E2A67D15300332249 /* SYSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYSize.swift; sourceTree = "<group>"; };
-		4753F5102A6807EC00332249 /* SubSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSlideView.swift; sourceTree = "<group>"; };
+		4753F5102A6807EC00332249 /* SlideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideContentView.swift; sourceTree = "<group>"; };
 		4753F5142A6819F300332249 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4753F5182A68D37500332249 /* PropertySideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySideBarView.swift; sourceTree = "<group>"; };
 		47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaSettingView.swift; sourceTree = "<group>"; };
 		47F269E32A6E7E2900B6E2E3 /* SlideManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManageable.swift; sourceTree = "<group>"; };
 		47F269E52A70B14200B6E2E3 /* SlideListSideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideListSideBarView.swift; sourceTree = "<group>"; };
+		47F269E72A710B3600B6E2E3 /* SlideListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideListTableViewCell.swift; sourceTree = "<group>"; };
 		F4AEBC612A64DD630047580C /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AEBC642A64DD630047580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AEBC662A64DD630047580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,12 +243,13 @@
 			isa = PBXGroup;
 			children = (
 				4753F4F82A66C60D00332249 /* KeynoteView.swift */,
-				4753F5102A6807EC00332249 /* SubSlideView.swift */,
+				4753F5102A6807EC00332249 /* SlideContentView.swift */,
 				4753F5182A68D37500332249 /* PropertySideBarView.swift */,
 				47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */,
 				47F269DF2A6E184100B6E2E3 /* ColorSettingView.swift */,
 				47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */,
 				47F269E52A70B14200B6E2E3 /* SlideListSideBarView.swift */,
+				47F269E72A710B3600B6E2E3 /* SlideListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,7 +410,8 @@
 				F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */,
 				F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */,
 				F4AEBCA62A652FEC0047580C /* SquareSlide.swift in Sources */,
-				4753F5112A6807EC00332249 /* SubSlideView.swift in Sources */,
+				4753F5112A6807EC00332249 /* SlideContentView.swift in Sources */,
+				47F269E82A710B3600B6E2E3 /* SlideListTableViewCell.swift in Sources */,
 				F4AEBCA22A6525950047580C /* SYAlpha.swift in Sources */,
 				47F269E22A6E184A00B6E2E3 /* AlphaSettingView.swift in Sources */,
 				47F269E42A6E7E2900B6E2E3 /* SlideManageable.swift in Sources */,

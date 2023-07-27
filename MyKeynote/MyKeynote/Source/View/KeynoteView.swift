@@ -10,9 +10,15 @@ import UIKit
 protocol KeynoteViewDelegate: AnyObject {
     func backgroundColorButtonDidTapped(_ sender: UIButton)
     func alphaValueDidChanged(value: Int)
-    func subSlideViewDidTapped(slideID: String)
+    func slideContentViewDidTapped(slideID: String)
     func slideViewDidTapped()
     func slideAddButtonDidTapped()
+    func slideCellDidSelected(at index: Int)
+}
+
+protocol KeynoteViewDataSource: AnyObject {
+    func numberOfSlides() -> Int
+    func slideTypeImage(at index: Int) -> UIImage?
 }
 
 final class KeynoteView: UIView {
@@ -29,25 +35,26 @@ final class KeynoteView: UIView {
     private let propertySideBarView = PropertySideBarView()
     
     weak var delegate: KeynoteViewDelegate?
+    weak var dataSource: KeynoteViewDataSource?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupViews()
-        setupSubviewDelegate()
+        setupSubviewDelegateAndDataSource()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         setupViews()
-        setupSubviewDelegate()
+        setupSubviewDelegateAndDataSource()
     }
     
-    func addSlideView(_ slide: Slide) {
-        let newSlideView = SlideView(frame: .zero, slide: slide)
+    func addSlideView(slideID: String, size: CGSize) {
+        let newSlideView = SlideView(frame: .zero, size: size)
         newSlideView.delegate = self
-        slideViewsByID[slide.id] = newSlideView
+        slideViewsByID[slideID] = newSlideView
         
         addSubview(newSlideView)
         NSLayoutConstraint.activate([
@@ -56,6 +63,13 @@ final class KeynoteView: UIView {
             newSlideView.rightAnchor.constraint(equalTo: propertySideBarView.leftAnchor),
             newSlideView.heightAnchor.constraint(equalTo: newSlideView.widthAnchor, multiplier: Constants.backgroundViewRatio)
         ])
+        
+        slideListSideBarView.addSlide()
+    }
+    
+    func showSlideView(havingID slideID: String) {
+        guard let slideView = slideViewsByID[slideID] else { return }
+        self.bringSubviewToFront(slideView)
     }
     
     func addBorderToSlide(havingID id: String) {
@@ -98,11 +112,9 @@ extension KeynoteView: PropertySideBarViewDelegate {
 
 extension KeynoteView: SlideViewDelegate {
     
-    func subSlideViewDidTapped(_ slideView: SlideView) {
-        guard let slideViewByID = slideViewsByID.first(where: { $0.value === slideView }) else {
-            return
-        }
-        delegate?.subSlideViewDidTapped(slideID: slideViewByID.key)
+    func slideContentViewDidTapped(_ slideView: SlideView) {
+        guard let slideViewByID = slideViewsByID.first(where: { $0.value === slideView }) else { return }
+        delegate?.slideContentViewDidTapped(slideID: slideViewByID.key)
     }
     
     func slideViewDidTapped() {
@@ -110,10 +122,22 @@ extension KeynoteView: SlideViewDelegate {
     }
 }
 
-extension KeynoteView: SlideListSideBarViewDelegate {
+extension KeynoteView: SlideListSideBarViewDelegate, SlideListSideBarViewDataSource {
     
     func slideAddButtonDidTapped() {
         delegate?.slideAddButtonDidTapped()
+    }
+    
+    func slideCellDidSelected(at index: Int) {
+        delegate?.slideCellDidSelected(at: index)
+    }
+    
+    func numberOfSlides() -> Int {
+        dataSource?.numberOfSlides() ?? 0
+    }
+    
+    func slideTypeImage(at index: Int) -> UIImage? {
+        dataSource?.slideTypeImage(at: index)
     }
 }
 
@@ -126,8 +150,10 @@ extension KeynoteView {
         setupAutoLayout()
     }
     
-    private func setupSubviewDelegate() {
+    private func setupSubviewDelegateAndDataSource() {
         slideListSideBarView.delegate = self
+        slideListSideBarView.dataSource = self
+        
         propertySideBarView.delegate = self
     }
     

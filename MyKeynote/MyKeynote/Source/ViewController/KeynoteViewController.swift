@@ -41,16 +41,22 @@ class KeynoteViewController: UIViewController {
         addObservers()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     private func setupViews() {
         keynoteView.frame = view.frame
-        keynoteView.delegate = self
         view = keynoteView
+        
+        keynoteView.delegate = self
+        keynoteView.dataSource = self
     }
     
     private func addObservers() {
         NotificationCenter.default.addObserver(
             forName: SlideManager.Notifications.backgroundColorOfSlideDidChanged,
-            object: nil,
+            object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
@@ -65,7 +71,7 @@ class KeynoteViewController: UIViewController {
         
         NotificationCenter.default.addObserver(
             forName: SlideManager.Notifications.alphaOfSlideDidChanged,
-            object: nil,
+            object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
@@ -80,7 +86,7 @@ class KeynoteViewController: UIViewController {
         
         NotificationCenter.default.addObserver(
             forName: SlideManager.Notifications.slideDidAdded,
-            object: nil,
+            object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
@@ -88,7 +94,10 @@ class KeynoteViewController: UIViewController {
                       let newSlide = userInfo[SlideManager.UserInfoKey.newSlide] as? Slide else {
                     return
                 }
-                keynoteView.addSlideView(newSlide)
+                
+                keynoteView.addSlideView(slideID: newSlide.id, size: CGSize(sySize: newSlide.size))
+                keynoteView.updateColorOf(havingID: newSlide.id, to: UIColor(rgb: newSlide.backgroundColor))
+                keynoteView.updateAlphaOf(havingID: newSlide.id, to: newSlide.alpha.value)
             }
         )
     }
@@ -105,7 +114,7 @@ extension KeynoteViewController: KeynoteViewDelegate {
         slideManager.changeAlphaOf(havingID: idOfSelectedSlide, to: value)
     }
     
-    func subSlideViewDidTapped(slideID: String) {
+    func slideContentViewDidTapped(slideID: String) {
         guard let selectedSlide = slideManager.slide(havingID: slideID) else {
             return
         }
@@ -114,7 +123,6 @@ extension KeynoteViewController: KeynoteViewDelegate {
         keynoteView.addBorderToSlide(havingID: slideID)
         keynoteView.updateColorOf(havingID: slideID, to: UIColor(rgb: selectedSlide.backgroundColor))
         keynoteView.updateAlphaOf(havingID: slideID, to: selectedSlide.alpha.value)
-        
     }
     
     func slideViewDidTapped() {
@@ -128,6 +136,17 @@ extension KeynoteViewController: KeynoteViewDelegate {
         slideManager.addSlide(type: SquareSlide.self)
     }
     
+    func slideCellDidSelected(at index: Int) {
+        if let idOfSelectedSlide {
+            keynoteView.removeBorderToSlide(havingID: idOfSelectedSlide)
+            keynoteView.disableAllProperty()
+        }
+        
+        guard let selectedSlide = slideManager[index] else { return }
+        idOfSelectedSlide = selectedSlide.id
+        keynoteView.showSlideView(havingID: selectedSlide.id)
+    }
+    
     private func presentColorPicker(_ sender: UIButton) {
         let colorPicker = UIColorPickerViewController()
         colorPicker.title = "배경색"
@@ -139,6 +158,20 @@ extension KeynoteViewController: KeynoteViewDelegate {
     }
 }
 
+extension KeynoteViewController: KeynoteViewDataSource {
+    
+    func numberOfSlides() -> Int {
+        slideManager.numberOfSlide
+    }
+    
+    func slideTypeImage(at index: Int) -> UIImage? {
+        guard let slide = slideManager[index] else {
+            return .remove
+        }
+        return UIImage.slideTypeImage(slide)
+    }
+}
+
 extension KeynoteViewController: UIColorPickerViewControllerDelegate {
 
     func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
@@ -147,5 +180,22 @@ extension KeynoteViewController: UIColorPickerViewControllerDelegate {
             return
         }
         slideManager.changeBackgroundColorOf(havingID: idOfSelectedSlide, to: rgbColor)
+    }
+}
+
+fileprivate extension UIImage {
+    static func slideTypeImage(_ slide: Slide) -> UIImage {
+        switch slide {
+        case is SquareSlide:
+            return UIImage(systemName: "rectangle.inset.filled") ?? .remove
+        default:
+            return UIImage(systemName: "square") ?? .remove
+        }
+    }
+}
+
+fileprivate extension CGSize {
+    init(sySize: SYSize) {
+        self.init(width: sySize.width, height: sySize.height)
     }
 }

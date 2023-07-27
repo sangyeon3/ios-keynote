@@ -8,13 +8,13 @@
 import UIKit
 
 protocol SlideViewDelegate: AnyObject {
-    func subSlideViewDidTapped(_ slideView: SlideView)
+    func slideContentViewDidTapped(_ slideView: SlideView)
     func slideViewDidTapped()
 }
 
 final class SlideView: UIView {
     
-    private var subSlideView: SubSlideView!
+    private var slideContentView: SlideContentView!
     
     weak var delegate: SlideViewDelegate?
     
@@ -22,10 +22,10 @@ final class SlideView: UIView {
         super.init(frame: frame)
     }
     
-    init(frame: CGRect, slide: Slide) {
+    init(frame: CGRect, size: CGSize) {
         super.init(frame: frame)
         
-        setupViews(for: slide)
+        setupViews(size: size)
         setupGestureRecognizer()
     }
     
@@ -36,37 +36,37 @@ final class SlideView: UIView {
     }
 
     func addBorder() {
-        subSlideView.addBorder()
+        slideContentView.addBorder()
     }
     
     func removeBorder() {
-        subSlideView.removeBorder()
+        slideContentView.removeBorder()
     }
     
     func updateBackgroundColor(to color: UIColor) {
-        subSlideView.updateBackgroundColor(to: color)
+        slideContentView.updateBackgroundColor(to: color)
     }
     
     func updateAlpha(to alpha: Int) {
-        subSlideView.updateAlpha(to: alpha)
+        slideContentView.updateAlpha(to: alpha)
     }
 }
 
-extension SlideView: SubSlideViewDelegate {
+extension SlideView: SlideContentViewDelegate {
     
-    func subSlideViewDidTapped() {
-        delegate?.subSlideViewDidTapped(self)
+    func slideContentViewDidTapped() {
+        delegate?.slideContentViewDidTapped(self)
     }
 }
 
 extension SlideView {
     
-    private func setupViews(for slide: Slide) {
+    private func setupViews(size: CGSize) {
         backgroundColor = .white
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         
-        setupSubSlideView(for: slide)
+        setupSlideContentView(size: size)
     }
     
     private func setupGestureRecognizer() {
@@ -74,16 +74,16 @@ extension SlideView {
         addGestureRecognizer(tapGestureRecognizer)
     }
     
-    private func setupSubSlideView(for slide: Slide) {
-        subSlideView = SubSlideView(frame: .zero, slide: slide)
-        subSlideView.delegate = self
+    private func setupSlideContentView(size: CGSize) {
+        slideContentView = SlideContentView(frame: .zero)
+        slideContentView.delegate = self
         
-        addSubview(subSlideView)
+        addSubview(slideContentView)
         NSLayoutConstraint.activate([
-            subSlideView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            subSlideView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            subSlideView.widthAnchor.constraint(equalToConstant: slide.size.width),
-            subSlideView.heightAnchor.constraint(equalToConstant: slide.size.height)
+            slideContentView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            slideContentView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            slideContentView.widthAnchor.constraint(equalToConstant: size.width),
+            slideContentView.heightAnchor.constraint(equalToConstant: size.height)
         ])
     }
     

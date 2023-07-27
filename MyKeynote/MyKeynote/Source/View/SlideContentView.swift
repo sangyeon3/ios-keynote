@@ -1,5 +1,5 @@
 //
-//  SubSlideView.swift
+//  SlideContentView.swift
 //  MyKeynote
 //
 //  Created by  sangyeon on 2023/07/19.
@@ -7,27 +7,25 @@
 
 import UIKit
 
-protocol SubSlideViewDelegate: AnyObject {
-    func subSlideViewDidTapped()
+protocol SlideContentViewDelegate: AnyObject {
+    func slideContentViewDidTapped()
 }
 
-final class SubSlideView: UIView {
+final class SlideContentView: UIView {
     
-    weak var delegate: SubSlideViewDelegate?
+    weak var delegate: SlideContentViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setupViews()
         setupGestureRecognizer()
     }
-    
-    init(frame: CGRect, slide: Slide) {
-        super.init(frame: frame)
-        setupViews(for: slide)
-        setupGestureRecognizer()
-    }
-    
+            
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
+        setupViews()
         setupGestureRecognizer()
     }
     
@@ -50,12 +48,10 @@ final class SubSlideView: UIView {
     
 }
 
-extension SubSlideView {
+extension SlideContentView {
     
-    private func setupViews(for slide: Slide) {
+    private func setupViews() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor(rgb: slide.backgroundColor)
-        alpha = CGFloat(slide.alpha.value) / 10
     }
     
     private func setupGestureRecognizer() {
@@ -67,7 +63,7 @@ extension SubSlideView {
         guard gestureRecognizer.view != nil else { return }
             
         if gestureRecognizer.state == .ended {
-            delegate?.subSlideViewDidTapped()
+            delegate?.slideContentViewDidTapped()
         }
     }
 }
