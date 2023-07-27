@@ -33,6 +33,7 @@
 		47F26A062A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A052A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift */; };
 		47F26A082A72CD9300B6E2E3 /* SlideViewImageChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A072A72CD9300B6E2E3 /* SlideViewImageChangeable.swift */; };
 		47F26A0A2A72D34200B6E2E3 /* SquareSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A092A72D34200B6E2E3 /* SquareSlideView.swift */; };
+		47F26A0C2A72D5B300B6E2E3 /* PhotoSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */; };
 		F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC642A64DD630047580C /* AppDelegate.swift */; };
 		F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC662A64DD630047580C /* SceneDelegate.swift */; };
 		F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC682A64DD630047580C /* KeynoteViewController.swift */; };
@@ -93,6 +94,7 @@
 		47F26A052A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewAlphaChangeable.swift; sourceTree = "<group>"; };
 		47F26A072A72CD9300B6E2E3 /* SlideViewImageChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewImageChangeable.swift; sourceTree = "<group>"; };
 		47F26A092A72D34200B6E2E3 /* SquareSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlideView.swift; sourceTree = "<group>"; };
+		47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlideView.swift; sourceTree = "<group>"; };
 		F4AEBC612A64DD630047580C /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AEBC642A64DD630047580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AEBC662A64DD630047580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */,
 				47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */,
 				47F26A092A72D34200B6E2E3 /* SquareSlideView.swift */,
+				47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */,
 			);
 			path = Slide;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */,
 				47F269EE2A721DFB00B6E2E3 /* AlphaAdaptable.swift in Sources */,
 				47F269F42A722F9900B6E2E3 /* SquareSlide.swift in Sources */,
+				47F26A0C2A72D5B300B6E2E3 /* PhotoSlideView.swift in Sources */,
 				4753F50F2A67D15300332249 /* SYSize.swift in Sources */,
 				47F26A0A2A72D34200B6E2E3 /* SquareSlideView.swift in Sources */,
 				47F26A002A729C3800B6E2E3 /* SlideViewBorderable.swift in Sources */,
