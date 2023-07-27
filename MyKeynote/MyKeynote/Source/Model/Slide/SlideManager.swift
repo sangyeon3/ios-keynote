@@ -25,12 +25,6 @@ class SlideManager: SlideManageable {
         slides.count
     }
     
-    private let factory: SlideCreatable
-    
-    init(factory: SlideCreatable) {
-        self.factory = factory
-    }
-    
     subscript(index: Int) -> BaseSlide? {
         if 0..<numberOfSlide ~= index {
             return slides[index]
