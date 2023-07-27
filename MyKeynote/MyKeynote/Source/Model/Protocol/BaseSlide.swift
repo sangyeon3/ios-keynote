@@ -7,8 +7,12 @@
 
 import Foundation
 
-protocol BaseSlide {
+protocol SlideIdentifiable {
     var id: String { get }
-    var size: SYSize { get }
-    func changeSize(to size: SYSize)
+}
+
+extension SlideIdentifiable {
+    func isEqual(with other: SlideIdentifiable) -> Bool {
+        self.id == other.id
+    }
 }
