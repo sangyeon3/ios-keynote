@@ -19,7 +19,7 @@ class SlideManager: SlideManageable {
         static let element = "element"
     }
     
-    private var slides: [Slide] = []
+    private var slides: [BaseSlide] = []
     
     var numberOfSlide: Int {
         slides.count
@@ -31,14 +31,14 @@ class SlideManager: SlideManageable {
         self.factory = factory
     }
     
-    subscript(index: Int) -> Slide? {
+    subscript(index: Int) -> BaseSlide? {
         if 0..<numberOfSlide ~= index {
             return slides[index]
         }
         return nil
     }
     
-    func slide(havingID id: String) -> Slide? {
+    func slide(havingID id: String) -> BaseSlide? {
         slides.first(where: { $0.id == id })
     }
     
