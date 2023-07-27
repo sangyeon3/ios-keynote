@@ -62,7 +62,7 @@ class KeynoteViewController: UIViewController {
                 guard let self,
                       let idOfSelectedSlide,
                       let userInfo = notification.userInfo,
-                      let color = userInfo[SlideManager.UserInfoKey.color] as? RGBColor else {
+                      let color = userInfo[SlideManager.UserInfoKey.element] as? RGBColor else {
                     return
                 }
                 keynoteView.updateColorOf(havingID: idOfSelectedSlide, to: UIColor(rgb: color))
@@ -77,7 +77,7 @@ class KeynoteViewController: UIViewController {
                 guard let self,
                       let idOfSelectedSlide,
                       let userInfo = notification.userInfo,
-                      let alpha = userInfo[SlideManager.UserInfoKey.alpha] as? Int else {
+                      let alpha = userInfo[SlideManager.UserInfoKey.element] as? Int else {
                     return
                 }
                 keynoteView.updateAlphaOf(havingID: idOfSelectedSlide, to: alpha)
@@ -91,7 +91,7 @@ class KeynoteViewController: UIViewController {
             using: { [weak self] notification in
                 guard let self,
                       let userInfo = notification.userInfo,
-                      let newSlide = userInfo[SlideManager.UserInfoKey.newSlide] as? Slide else {
+                      let newSlide = userInfo[SlideManager.UserInfoKey.element] as? Slide else {
                     return
                 }
                 

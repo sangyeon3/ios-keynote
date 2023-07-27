@@ -16,9 +16,7 @@ class SlideManager: SlideManageable {
     }
     
     enum UserInfoKey {
-        static let color = "color"
-        static let alpha = "alpha"
-        static let newSlide = "newSlide"
+        static let element = "element"
     }
     
     private var slides: [Slide] = []
@@ -52,7 +50,7 @@ class SlideManager: SlideManageable {
         NotificationCenter.default.post(
             name: Notifications.slideDidAdded,
             object: self,
-            userInfo: [UserInfoKey.newSlide: newSlide]
+            userInfo: [UserInfoKey.element: newSlide]
         )
         
         return newSlide
@@ -67,7 +65,7 @@ class SlideManager: SlideManageable {
         NotificationCenter.default.post(
             name: Notifications.backgroundColorOfSlideDidChanged,
             object: self,
-            userInfo: [UserInfoKey.color: color]
+            userInfo: [UserInfoKey.element: color]
         )
     }
     
@@ -80,7 +78,7 @@ class SlideManager: SlideManageable {
         NotificationCenter.default.post(
             name: Notifications.alphaOfSlideDidChanged,
             object: self,
-            userInfo: [UserInfoKey.alpha: alphaValue]
+            userInfo: [UserInfoKey.element: alphaValue]
         )
     }
 }
