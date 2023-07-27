@@ -2,19 +2,34 @@
 //  SquareSlide.swift
 //  MyKeynote
 //
-//  Created by 변상연 on 2023/07/17.
+//  Created by  sangyeon on 2023/07/27.
 //
 
 import Foundation
 
-final class SquareSlide: Slide {
+final class SquareSlide: BaseSlide, Colorful, AlphaAdaptable {
+
+    var id: String
+    private(set) var size: SYSize
+    private(set) var color: RGBColor
+    private(set) var alpha: SYAlpha
     
-    required init(id: String, width: Double, color: RGBColor, alpha: SYAlpha) {
-        super.init(id: id, width: width, color: color, alpha: alpha)
-        self.size = SYSize(width: width, height: width)
+    init(id: String, side: Double, color: RGBColor, alpha: SYAlpha) {
+        self.id = id
+        self.size = SYSize(width: side, height: side)
+        self.color = color
+        self.alpha = alpha
     }
     
-    override var description: String {
-        "\(Self.self) (\(id)), Side:\(size.width), \(backgroundColor), Alpha: \(alpha)"
+    var description: String {
+        "SquareSlide (\(id)), Side: \(size.width), \(color), Alpha: \(alpha)"
+    }
+    
+    func changeColor(to color: RGBColor) {
+        self.color = color
+    }
+    
+    func changeAlpha(to alpha: SYAlpha) {
+        self.alpha = alpha
     }
 }
