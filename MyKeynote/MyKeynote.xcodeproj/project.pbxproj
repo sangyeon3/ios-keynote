@@ -26,6 +26,7 @@
 		47F269F22A7229FE00B6E2E3 /* BaseSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */; };
 		47F269F42A722F9900B6E2E3 /* SquareSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F32A722F9900B6E2E3 /* SquareSlide.swift */; };
 		47F269F62A7230CD00B6E2E3 /* PhotoSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F52A7230CD00B6E2E3 /* PhotoSlide.swift */; };
+		47F269FD2A72998900B6E2E3 /* BaseSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */; };
 		47F26A002A729C3800B6E2E3 /* SlideViewBorderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269FF2A729C3700B6E2E3 /* SlideViewBorderable.swift */; };
 		47F26A022A72CB3600B6E2E3 /* SlideViewTappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A012A72CB3600B6E2E3 /* SlideViewTappable.swift */; };
 		47F26A042A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A032A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift */; };
@@ -84,6 +85,7 @@
 		47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlide.swift; sourceTree = "<group>"; };
 		47F269F32A722F9900B6E2E3 /* SquareSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlide.swift; sourceTree = "<group>"; };
 		47F269F52A7230CD00B6E2E3 /* PhotoSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlide.swift; sourceTree = "<group>"; };
+		47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlideView.swift; sourceTree = "<group>"; };
 		47F269FF2A729C3700B6E2E3 /* SlideViewBorderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewBorderable.swift; sourceTree = "<group>"; };
 		47F26A012A72CB3600B6E2E3 /* SlideViewTappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewTappable.swift; sourceTree = "<group>"; };
 		47F26A032A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewBackgroundColorChangeable.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				47F269FE2A729BEC00B6E2E3 /* Protocol */,
 				4753F5102A6807EC00332249 /* SlideContentView.swift */,
 				47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */,
+				47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */,
 			);
 			path = Slide;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				47F26A042A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift in Sources */,
 				4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */,
 				47F269E02A6E184100B6E2E3 /* ColorSettingView.swift in Sources */,
+				47F269FD2A72998900B6E2E3 /* BaseSlideView.swift in Sources */,
 				47F269F62A7230CD00B6E2E3 /* PhotoSlide.swift in Sources */,
 				F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */,
 				F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */,
