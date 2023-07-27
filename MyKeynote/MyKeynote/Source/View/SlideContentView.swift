@@ -17,17 +17,15 @@ final class SlideContentView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setupViews()
         setupGestureRecognizer()
     }
-    
-    init(frame: CGRect, slide: Slide) {
-        super.init(frame: frame)
-        setupViews(for: slide)
-        setupGestureRecognizer()
-    }
-    
+            
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
+        setupViews()
         setupGestureRecognizer()
     }
     
@@ -52,10 +50,8 @@ final class SlideContentView: UIView {
 
 extension SlideContentView {
     
-    private func setupViews(for slide: Slide) {
+    private func setupViews() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor(rgb: slide.backgroundColor)
-        alpha = CGFloat(slide.alpha.value) / 10
     }
     
     private func setupGestureRecognizer() {

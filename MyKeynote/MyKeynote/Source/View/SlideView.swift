@@ -22,10 +22,10 @@ final class SlideView: UIView {
         super.init(frame: frame)
     }
     
-    init(frame: CGRect, slide: Slide) {
+    init(frame: CGRect, size: CGSize) {
         super.init(frame: frame)
         
-        setupViews(for: slide)
+        setupViews(size: size)
         setupGestureRecognizer()
     }
     
@@ -61,12 +61,12 @@ extension SlideView: SlideContentViewDelegate {
 
 extension SlideView {
     
-    private func setupViews(for slide: Slide) {
+    private func setupViews(size: CGSize) {
         backgroundColor = .white
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         
-        setupSlideContentView(for: slide)
+        setupSlideContentView(size: size)
     }
     
     private func setupGestureRecognizer() {
@@ -74,16 +74,16 @@ extension SlideView {
         addGestureRecognizer(tapGestureRecognizer)
     }
     
-    private func setupSlideContentView(for slide: Slide) {
-        slideContentView = SlideContentView(frame: .zero, slide: slide)
+    private func setupSlideContentView(size: CGSize) {
+        slideContentView = SlideContentView(frame: .zero)
         slideContentView.delegate = self
         
         addSubview(slideContentView)
         NSLayoutConstraint.activate([
             slideContentView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             slideContentView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            slideContentView.widthAnchor.constraint(equalToConstant: slide.size.width),
-            slideContentView.heightAnchor.constraint(equalToConstant: slide.size.height)
+            slideContentView.widthAnchor.constraint(equalToConstant: size.width),
+            slideContentView.heightAnchor.constraint(equalToConstant: size.height)
         ])
     }
     

@@ -90,7 +90,10 @@ class KeynoteViewController: UIViewController {
                       let newSlide = userInfo[SlideManager.UserInfoKey.newSlide] as? Slide else {
                     return
                 }
-                keynoteView.addSlideView(newSlide)
+                
+                keynoteView.addSlideView(slideID: newSlide.id, size: CGSize(sySize: newSlide.size))
+                keynoteView.updateColorOf(havingID: newSlide.id, to: UIColor(rgb: newSlide.backgroundColor))
+                keynoteView.updateAlphaOf(havingID: newSlide.id, to: newSlide.alpha.value)
             }
         )
     }

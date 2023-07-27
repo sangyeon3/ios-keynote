@@ -51,10 +51,10 @@ final class KeynoteView: UIView {
         setupSubviewDelegateAndDataSource()
     }
     
-    func addSlideView(_ slide: Slide) {
-        let newSlideView = SlideView(frame: .zero, slide: slide)
+    func addSlideView(slideID: String, size: CGSize) {
+        let newSlideView = SlideView(frame: .zero, size: size)
         newSlideView.delegate = self
-        slideViewsByID[slide.id] = newSlideView
+        slideViewsByID[slideID] = newSlideView
         
         addSubview(newSlideView)
         NSLayoutConstraint.activate([
