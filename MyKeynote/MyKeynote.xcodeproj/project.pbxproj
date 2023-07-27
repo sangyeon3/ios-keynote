@@ -164,6 +164,34 @@
 			path = Property;
 			sourceTree = "<group>";
 		};
+		47F269F92A72953000B6E2E3 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				4753F5102A6807EC00332249 /* SlideContentView.swift */,
+				47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
+		47F269FA2A72953700B6E2E3 /* PropertySideBar */ = {
+			isa = PBXGroup;
+			children = (
+				47F269DF2A6E184100B6E2E3 /* ColorSettingView.swift */,
+				47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */,
+				4753F5182A68D37500332249 /* PropertySideBarView.swift */,
+			);
+			path = PropertySideBar;
+			sourceTree = "<group>";
+		};
+		47F269FB2A72954300B6E2E3 /* SlideListSideBar */ = {
+			isa = PBXGroup;
+			children = (
+				47F269E52A70B14200B6E2E3 /* SlideListSideBarView.swift */,
+				47F269E72A710B3600B6E2E3 /* SlideListTableViewCell.swift */,
+			);
+			path = SlideListSideBar;
+			sourceTree = "<group>";
+		};
 		F4AEBC582A64DD630047580C = {
 			isa = PBXGroup;
 			children = (
@@ -254,13 +282,9 @@
 			isa = PBXGroup;
 			children = (
 				4753F4F82A66C60D00332249 /* KeynoteView.swift */,
-				4753F5102A6807EC00332249 /* SlideContentView.swift */,
-				4753F5182A68D37500332249 /* PropertySideBarView.swift */,
-				47F269DD2A6E0DA300B6E2E3 /* SlideView.swift */,
-				47F269DF2A6E184100B6E2E3 /* ColorSettingView.swift */,
-				47F269E12A6E184A00B6E2E3 /* AlphaSettingView.swift */,
-				47F269E52A70B14200B6E2E3 /* SlideListSideBarView.swift */,
-				47F269E72A710B3600B6E2E3 /* SlideListTableViewCell.swift */,
+				47F269F92A72953000B6E2E3 /* Slide */,
+				47F269FB2A72954300B6E2E3 /* SlideListSideBar */,
+				47F269FA2A72953700B6E2E3 /* PropertySideBar */,
 			);
 			path = View;
 			sourceTree = "<group>";
