@@ -13,7 +13,7 @@ protocol BaseSlideViewDelegate: AnyObject {
 }
 
 class BaseSlideView: UIView, SlideViewBorderable, SlideViewTappable {
-    private var contentView: UIView?
+    var contentView: UIView?
     private weak var delegate: BaseSlideViewDelegate?
     
     override init(frame: CGRect) {
