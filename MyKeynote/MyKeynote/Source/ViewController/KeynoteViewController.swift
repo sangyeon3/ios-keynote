@@ -186,3 +186,9 @@ fileprivate extension UIImage {
         }
     }
 }
+
+fileprivate extension CGSize {
+    init(sySize: SYSize) {
+        self.init(width: sySize.width, height: sySize.height)
+    }
+}
