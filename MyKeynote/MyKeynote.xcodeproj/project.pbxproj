@@ -23,6 +23,7 @@
 		47F269EC2A721D7800B6E2E3 /* Colorful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269EB2A721D7800B6E2E3 /* Colorful.swift */; };
 		47F269EE2A721DFB00B6E2E3 /* AlphaAdaptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269ED2A721DFB00B6E2E3 /* AlphaAdaptable.swift */; };
 		47F269F02A7228D100B6E2E3 /* Photoable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269EF2A7228D100B6E2E3 /* Photoable.swift */; };
+		47F269F22A7229FE00B6E2E3 /* BaseSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */; };
 		F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC642A64DD630047580C /* AppDelegate.swift */; };
 		F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC662A64DD630047580C /* SceneDelegate.swift */; };
 		F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC682A64DD630047580C /* KeynoteViewController.swift */; };
@@ -74,6 +75,7 @@
 		47F269EB2A721D7800B6E2E3 /* Colorful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorful.swift; sourceTree = "<group>"; };
 		47F269ED2A721DFB00B6E2E3 /* AlphaAdaptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaAdaptable.swift; sourceTree = "<group>"; };
 		47F269EF2A7228D100B6E2E3 /* Photoable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photoable.swift; sourceTree = "<group>"; };
+		47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlide.swift; sourceTree = "<group>"; };
 		F4AEBC612A64DD630047580C /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AEBC642A64DD630047580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AEBC662A64DD630047580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				47F269EB2A721D7800B6E2E3 /* Colorful.swift */,
 				47F269ED2A721DFB00B6E2E3 /* AlphaAdaptable.swift */,
 				47F269EF2A7228D100B6E2E3 /* Photoable.swift */,
+				47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				4753F50F2A67D15300332249 /* SYSize.swift in Sources */,
 				F4AEBCAE2A65478E0047580C /* SlideID.swift in Sources */,
 				F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */,
+				47F269F22A7229FE00B6E2E3 /* BaseSlide.swift in Sources */,
 				F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */,
 				F4AEBCA62A652FEC0047580C /* SquareSlide.swift in Sources */,
 				4753F5112A6807EC00332249 /* SlideContentView.swift in Sources */,
