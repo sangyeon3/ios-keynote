@@ -41,10 +41,6 @@ class KeynoteViewController: UIViewController {
         addObservers()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     private func setupViews() {
         keynoteView.frame = view.frame
         view = keynoteView
