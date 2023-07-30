@@ -98,6 +98,22 @@ class KeynoteViewController: UIViewController {
                 keynoteView.updateAlphaOf(havingID: newSlide.id, to: newSlide.alpha.value)
             }
         )
+        
+        NotificationCenter.default.addObserver(
+            forName: SlideManager.Notifications.photoSlideDidAdded,
+            object: slideManager,
+            queue: .main,
+            using: { [weak self] notification in
+                guard let self,
+                      let userInfo = notification.userInfo,
+                      let newSlide = userInfo[SlideManager.UserInfoKey.element] as? BaseSlide & Photoable & AlphaAdaptable else {
+                    return
+                }
+                
+                // TODO: image에 url로부터 이미지 불러와서 전달?
+                let contentView = PhotoSlideContentView()
+                let slideView = SlideView(contentView: contentView, contentSize: CGSize(sySize: newSlide.size))
+                keynoteView.addSlideView(slideID: newSlide.id, newSlideView: slideView)
                 keynoteView.updateAlphaOf(havingID: newSlide.id, to: newSlide.alpha.value)
             }
         )
