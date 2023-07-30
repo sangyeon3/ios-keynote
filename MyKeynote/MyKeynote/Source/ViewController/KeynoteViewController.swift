@@ -81,18 +81,23 @@ class KeynoteViewController: UIViewController {
         )
         
         NotificationCenter.default.addObserver(
-            forName: SlideManager.Notifications.slideDidAdded,
+            forName: SlideManager.Notifications.squareSlideDidAdded,
             object: slideManager,
             queue: .main,
             using: { [weak self] notification in
                 guard let self,
                       let userInfo = notification.userInfo,
-                      let newSlide = userInfo[SlideManager.UserInfoKey.element] as? Slide else {
+                      let newSlide = userInfo[SlideManager.UserInfoKey.element] as? BaseSlide & Colorful & AlphaAdaptable else {
                     return
                 }
                 
-                keynoteView.addSlideView(slideID: newSlide.id, size: CGSize(sySize: newSlide.size))
-                keynoteView.updateColorOf(havingID: newSlide.id, to: UIColor(rgb: newSlide.backgroundColor))
+                let contentView = SquareSlideContentView(color: UIColor(rgb: newSlide.color))
+                let slideView = SlideView(contentView: contentView, contentSize: CGSize(sySize: newSlide.size))
+                keynoteView.addSlideView(slideID: newSlide.id, newSlideView: slideView)
+                keynoteView.updateColorOf(havingID: newSlide.id, to: UIColor(rgb: newSlide.color))
+                keynoteView.updateAlphaOf(havingID: newSlide.id, to: newSlide.alpha.value)
+            }
+        )
                 keynoteView.updateAlphaOf(havingID: newSlide.id, to: newSlide.alpha.value)
             }
         )
