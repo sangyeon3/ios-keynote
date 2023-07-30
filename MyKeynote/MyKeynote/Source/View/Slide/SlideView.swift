@@ -14,7 +14,7 @@ protocol SlideViewDelegate: AnyObject {
 
 class SlideView: UIView, SlideViewTappable {
     
-    private var contentView: BaseSlideContentView?
+    var contentView: BaseSlideContentView?
     weak var delegate: SlideViewDelegate?
     
     init(contentView: BaseSlideContentView, contentSize: CGSize) {
