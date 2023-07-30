@@ -17,4 +17,6 @@ extension SlideIdentifiable {
     }
 }
 
-protocol BaseSlide: SlideIdentifiable, CustomStringConvertible {}
+protocol BaseSlide: SlideIdentifiable, CustomStringConvertible {
+    var size: SYSize { get }
+}
