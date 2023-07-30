@@ -213,7 +213,7 @@ extension KeynoteViewController: UIColorPickerViewControllerDelegate {
 }
 
 fileprivate extension UIImage {
-    static func slideTypeImage(_ slide: Slide) -> UIImage {
+    static func slideTypeImage(_ slide: BaseSlide) -> UIImage {
         switch slide {
         case is SquareSlide:
             return UIImage(systemName: "rectangle.inset.filled") ?? .remove
