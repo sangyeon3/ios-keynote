@@ -82,8 +82,8 @@ final class KeynoteView: UIView {
     }
     
     func updateColorOf(havingID id: String, to color: UIColor) {
-        guard let slideView = slideViewsByID[id] else { return }
-        slideView.updateBackgroundColor(to: color)
+        guard let slideView = slideViewsByID[id] as? SlideViewBackgroundColorChangeable else { return }
+        slideView.changeBackgroundColor(to: color)
         propertySideBarView.updateColorLabel(to: color.hexString)
     }
     
