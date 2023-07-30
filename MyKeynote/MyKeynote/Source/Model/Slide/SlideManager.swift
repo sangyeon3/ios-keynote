@@ -12,7 +12,8 @@ class SlideManager: SlideManageable {
     enum Notifications {
         static let backgroundColorOfSlideDidChanged = Notification.Name("slideBackgroundColorDidChanged")
         static let alphaOfSlideDidChanged = Notification.Name("alphaOfSlideDidChanged")
-        static let slideDidAdded = Notification.Name("slideDidAdded")
+        static let squareSlideDidAdded = Notification.Name("squareSlideDidAdded")
+        static let photoSlideDidAdded = Notification.Name("photoSlideDidAdded")
     }
     
     enum UserInfoKey {
@@ -41,11 +42,23 @@ class SlideManager: SlideManageable {
         slides.first(where: { $0.id == id })
     }
     
-    func addSlide(_ newSlide: BaseSlide) {
+    func addSquareSlide() {
+        let newSlide = slideFactory.makeSquareSlide()
         slides.append(newSlide)
         
         NotificationCenter.default.post(
-            name: Notifications.slideDidAdded,
+            name: Notifications.squareSlideDidAdded,
+            object: self,
+            userInfo: [UserInfoKey.element: newSlide]
+        )
+    }
+    
+    func addPhotoSlide() {
+        let newSlide = slideFactory.makePhotoSlide()
+        slides.append(newSlide)
+        
+        NotificationCenter.default.post(
+            name: Notifications.photoSlideDidAdded,
             object: self,
             userInfo: [UserInfoKey.element: newSlide]
         )
