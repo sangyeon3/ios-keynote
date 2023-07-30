@@ -154,7 +154,15 @@ extension KeynoteViewController: KeynoteViewDelegate {
     }
     
     func slideAddButtonDidTapped() {
-        slideManager.addSlide(type: SquareSlide.self)
+        let randomNumber = Int.random(in: 0...1)
+        switch randomNumber {
+        case 0:
+            slideManager.addSquareSlide()
+        case 1:
+            slideManager.addPhotoSlide()
+        default:
+            return
+        }
     }
     
     func slideCellDidSelected(at index: Int) {
