@@ -88,8 +88,8 @@ final class KeynoteView: UIView {
     }
     
     func updateAlphaOf(havingID id: String, to alphaValue: Int) {
-        guard let slideView = slideViewsByID[id] else { return }
-        slideView.updateAlpha(to: alphaValue)
+        guard let slideView = slideViewsByID[id] as? SlideViewAlphaChangeable else { return }
+        slideView.changeAlpha(to: alphaValue)
         propertySideBarView.updateAlpha(to: alphaValue)
     }
     
