@@ -82,14 +82,14 @@ final class KeynoteView: UIView {
     }
     
     func updateColorOf(havingID id: String, to color: UIColor) {
-        guard let slideView = slideViewsByID[id] as? SlideViewBackgroundColorChangeable else { return }
-        slideView.changeBackgroundColor(to: color)
+        guard let contentView = slideViewsByID[id]?.contentView as? SlideViewBackgroundColorChangeable else { return }
+        contentView.changeBackgroundColor(to: color)
         propertySideBarView.updateColorLabel(to: color.hexString)
     }
     
     func updateAlphaOf(havingID id: String, to alphaValue: Int) {
-        guard let slideView = slideViewsByID[id] as? SlideViewAlphaChangeable else { return }
-        slideView.changeAlpha(to: alphaValue)
+        guard let contentView = slideViewsByID[id]?.contentView as? SlideViewAlphaChangeable else { return }
+        contentView.changeAlpha(to: alphaValue)
         propertySideBarView.updateAlpha(to: alphaValue)
     }
     
