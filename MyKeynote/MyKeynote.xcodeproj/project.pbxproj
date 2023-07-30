@@ -12,7 +12,6 @@
 		4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FA2A677DEE00332249 /* SlideManager.swift */; };
 		4753F5002A67811500332249 /* SildeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FF2A67811500332249 /* SildeManagerTests.swift */; };
 		4753F50F2A67D15300332249 /* SYSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F50E2A67D15300332249 /* SYSize.swift */; };
-		4753F5112A6807EC00332249 /* SlideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5102A6807EC00332249 /* SlideContentView.swift */; };
 		4753F5152A6819F300332249 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5142A6819F300332249 /* UIColor+.swift */; };
 		4753F5192A68D37500332249 /* PropertySideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F5182A68D37500332249 /* PropertySideBarView.swift */; };
 		47BA4EF52A75182C00B37254 /* BaseSlideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BA4EF42A75182C00B37254 /* BaseSlideContentView.swift */; };
@@ -27,14 +26,11 @@
 		47F269F22A7229FE00B6E2E3 /* BaseSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */; };
 		47F269F42A722F9900B6E2E3 /* SquareSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F32A722F9900B6E2E3 /* SquareSlide.swift */; };
 		47F269F62A7230CD00B6E2E3 /* PhotoSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269F52A7230CD00B6E2E3 /* PhotoSlide.swift */; };
-		47F269FD2A72998900B6E2E3 /* BaseSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */; };
 		47F26A002A729C3800B6E2E3 /* SlideViewBorderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F269FF2A729C3700B6E2E3 /* SlideViewBorderable.swift */; };
 		47F26A022A72CB3600B6E2E3 /* SlideViewTappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A012A72CB3600B6E2E3 /* SlideViewTappable.swift */; };
 		47F26A042A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A032A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift */; };
 		47F26A062A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A052A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift */; };
 		47F26A082A72CD9300B6E2E3 /* SlideViewImageChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A072A72CD9300B6E2E3 /* SlideViewImageChangeable.swift */; };
-		47F26A0A2A72D34200B6E2E3 /* SquareSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A092A72D34200B6E2E3 /* SquareSlideView.swift */; };
-		47F26A0C2A72D5B300B6E2E3 /* PhotoSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */; };
 		47F26A0A2A72D34200B6E2E3 /* SquareSlideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A092A72D34200B6E2E3 /* SquareSlideContentView.swift */; };
 		47F26A0C2A72D5B300B6E2E3 /* PhotoSlideContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F26A0B2A72D5B300B6E2E3 /* PhotoSlideContentView.swift */; };
 		F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC642A64DD630047580C /* AppDelegate.swift */; };
@@ -75,7 +71,6 @@
 		4753F4FA2A677DEE00332249 /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		4753F4FF2A67811500332249 /* SildeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SildeManagerTests.swift; sourceTree = "<group>"; };
 		4753F50E2A67D15300332249 /* SYSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYSize.swift; sourceTree = "<group>"; };
-		4753F5102A6807EC00332249 /* SlideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideContentView.swift; sourceTree = "<group>"; };
 		4753F5142A6819F300332249 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4753F5182A68D37500332249 /* PropertySideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySideBarView.swift; sourceTree = "<group>"; };
 		47BA4EF42A75182C00B37254 /* BaseSlideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlideContentView.swift; sourceTree = "<group>"; };
@@ -90,14 +85,11 @@
 		47F269F12A7229FE00B6E2E3 /* BaseSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlide.swift; sourceTree = "<group>"; };
 		47F269F32A722F9900B6E2E3 /* SquareSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlide.swift; sourceTree = "<group>"; };
 		47F269F52A7230CD00B6E2E3 /* PhotoSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlide.swift; sourceTree = "<group>"; };
-		47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlideView.swift; sourceTree = "<group>"; };
 		47F269FF2A729C3700B6E2E3 /* SlideViewBorderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewBorderable.swift; sourceTree = "<group>"; };
 		47F26A012A72CB3600B6E2E3 /* SlideViewTappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewTappable.swift; sourceTree = "<group>"; };
 		47F26A032A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewBackgroundColorChangeable.swift; sourceTree = "<group>"; };
 		47F26A052A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewAlphaChangeable.swift; sourceTree = "<group>"; };
 		47F26A072A72CD9300B6E2E3 /* SlideViewImageChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewImageChangeable.swift; sourceTree = "<group>"; };
-		47F26A092A72D34200B6E2E3 /* SquareSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlideView.swift; sourceTree = "<group>"; };
-		47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlideView.swift; sourceTree = "<group>"; };
 		47F26A092A72D34200B6E2E3 /* SquareSlideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSlideContentView.swift; sourceTree = "<group>"; };
 		47F26A0B2A72D5B300B6E2E3 /* PhotoSlideContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSlideContentView.swift; sourceTree = "<group>"; };
 		F4AEBC612A64DD630047580C /* MyKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,10 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				47F269FE2A729BEC00B6E2E3 /* Protocol */,
-				4753F5102A6807EC00332249 /* SlideContentView.swift */,
-				47F269FC2A72998900B6E2E3 /* BaseSlideView.swift */,
-				47F26A092A72D34200B6E2E3 /* SquareSlideView.swift */,
-				47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */,
 				47F26A092A72D34200B6E2E3 /* SquareSlideContentView.swift */,
 				47F26A0B2A72D5B300B6E2E3 /* PhotoSlideContentView.swift */,
 				471C7D2B2A7378390017DDF9 /* SlideView.swift */,
@@ -485,10 +473,8 @@
 				F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */,
 				47F269EE2A721DFB00B6E2E3 /* AlphaAdaptable.swift in Sources */,
 				47F269F42A722F9900B6E2E3 /* SquareSlide.swift in Sources */,
-				47F26A0C2A72D5B300B6E2E3 /* PhotoSlideView.swift in Sources */,
 				47F26A0C2A72D5B300B6E2E3 /* PhotoSlideContentView.swift in Sources */,
 				4753F50F2A67D15300332249 /* SYSize.swift in Sources */,
-				47F26A0A2A72D34200B6E2E3 /* SquareSlideView.swift in Sources */,
 				47F26A0A2A72D34200B6E2E3 /* SquareSlideContentView.swift in Sources */,
 				47F26A002A729C3800B6E2E3 /* SlideViewBorderable.swift in Sources */,
 				F4AEBCAE2A65478E0047580C /* SlideID.swift in Sources */,
@@ -496,7 +482,6 @@
 				F4AEBC692A64DD630047580C /* KeynoteViewController.swift in Sources */,
 				47F269F22A7229FE00B6E2E3 /* BaseSlide.swift in Sources */,
 				F4AEBC652A64DD630047580C /* AppDelegate.swift in Sources */,
-				4753F5112A6807EC00332249 /* SlideContentView.swift in Sources */,
 				47F269E82A710B3600B6E2E3 /* SlideListTableViewCell.swift in Sources */,
 				47F269F02A7228D100B6E2E3 /* Photoable.swift in Sources */,
 				471C7D2C2A7378390017DDF9 /* SlideView.swift in Sources */,
@@ -509,7 +494,6 @@
 				47F26A042A72CD4500B6E2E3 /* SlideViewBackgroundColorChangeable.swift in Sources */,
 				4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */,
 				47F269E02A6E184100B6E2E3 /* ColorSettingView.swift in Sources */,
-				47F269FD2A72998900B6E2E3 /* BaseSlideView.swift in Sources */,
 				47F269F62A7230CD00B6E2E3 /* PhotoSlide.swift in Sources */,
 				F4AEBC672A64DD630047580C /* SceneDelegate.swift in Sources */,
 				F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */,
