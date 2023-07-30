@@ -9,5 +9,4 @@ import Foundation
 
 protocol SlideViewTappable {
     func viewDidTapped()
-    func contentViewDidTapped()
 }
