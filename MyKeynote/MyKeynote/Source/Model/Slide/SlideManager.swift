@@ -19,7 +19,12 @@ class SlideManager: SlideManageable {
         static let element = "element"
     }
     
+    private let slideFactory: SlideCreatable
     private var slides: [BaseSlide] = []
+    
+    init(slideFactory: SlideCreatable) {
+        self.slideFactory = slideFactory
+    }
     
     var numberOfSlide: Int {
         slides.count
