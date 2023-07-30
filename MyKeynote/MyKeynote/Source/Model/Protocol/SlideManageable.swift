@@ -7,12 +7,18 @@
 
 import Foundation
 
-protocol SlideManageable {
-    var numberOfSlide: Int { get }
-    
-    subscript(index: Int) -> BaseSlide? { get }
-    func slide(havingID id: String) -> BaseSlide?
-    func addSlide(_ newSlide: BaseSlide)
+protocol SlideAddable {
+    func addSquareSlide()
+    func addPhotoSlide()
+}
+
+protocol SlideChangeable {
     func changeBackgroundColorOf(havingID slideID: String, to color: RGBColor)
     func changeAlphaOf(havingID slideID: String, to alphaValue: Int)
+}
+
+protocol SlideManageable: SlideAddable, SlideChangeable {
+    var numberOfSlide: Int { get }
+    subscript(index: Int) -> BaseSlide? { get }
+    func slide(havingID id: String) -> BaseSlide?
 }
