@@ -10,17 +10,19 @@ import Foundation
 final class PhotoSlide: BaseSlide, Photoable, AlphaAdaptable {
     
     var id: String
+    private(set) var size: SYSize
     private(set) var photoURL: URL?
     private(set) var alpha: SYAlpha
     
-    init(id: String, photoURL: URL? = nil, alpha: SYAlpha = .maxAlpha) {
+    init(id: String, size: SYSize, photoURL: URL? = nil, alpha: SYAlpha = .maxAlpha) {
         self.id = id
+        self.size = size
         self.photoURL = photoURL
         self.alpha = alpha
     }
     
     var description: String {
-        "PhotoSlide (\(id)), PhotoURL: \(photoURL), Alpha: \(alpha)"
+        "PhotoSlide (\(id)), Size: \(size), PhotoURL: \(photoURL), Alpha: \(alpha)"
     }
 
     func changPhoto(to url: URL) {

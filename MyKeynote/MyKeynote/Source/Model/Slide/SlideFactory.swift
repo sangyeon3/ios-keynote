@@ -20,6 +20,8 @@ final class SlideFactory: SlideCreatable {
     
     func makePhotoSlide() -> PhotoSlide {
         let id = SlideID.randomId()
-        return PhotoSlide(id: id)
+        let width = Double(Int.random(in: 100...400))
+        let height = Double(Int.random(in: 100...400))
+        return PhotoSlide(id: id, size: SYSize(width: width, height: height))
     }
 }
