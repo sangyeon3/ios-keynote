@@ -25,7 +25,7 @@ class KeynoteViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        self.slideManager = SlideManager(factory: SlideFactory())
+        self.slideManager = SlideManager(slideFactory: SlideFactory())
         super.init(coder: coder)
     }
     
