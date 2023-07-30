@@ -51,8 +51,7 @@ final class KeynoteView: UIView {
         setupSubviewDelegateAndDataSource()
     }
     
-    func addSlideView(slideID: String, size: CGSize) {
-        let newSlideView = SlideView(frame: .zero, size: size)
+    func addSlideView(slideID: String, newSlideView: SlideView) {
         newSlideView.delegate = self
         slideViewsByID[slideID] = newSlideView
         
