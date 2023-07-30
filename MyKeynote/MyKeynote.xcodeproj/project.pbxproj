@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471C7D2C2A7378390017DDF9 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471C7D2B2A7378390017DDF9 /* SlideView.swift */; };
 		4753F4F92A66C60D00332249 /* KeynoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4F82A66C60D00332249 /* KeynoteView.swift */; };
 		4753F4FB2A677DEE00332249 /* SlideManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FA2A677DEE00332249 /* SlideManager.swift */; };
 		4753F5002A67811500332249 /* SildeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4753F4FF2A67811500332249 /* SildeManagerTests.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		471C7D2B2A7378390017DDF9 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		4753F4F82A66C60D00332249 /* KeynoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeynoteView.swift; sourceTree = "<group>"; };
 		4753F4FA2A677DEE00332249 /* SlideManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideManager.swift; sourceTree = "<group>"; };
 		4753F4FF2A67811500332249 /* SildeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SildeManagerTests.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				47F26A0B2A72D5B300B6E2E3 /* PhotoSlideView.swift */,
 				47F26A092A72D34200B6E2E3 /* SquareSlideContentView.swift */,
 				47F26A0B2A72D5B300B6E2E3 /* PhotoSlideContentView.swift */,
+				471C7D2B2A7378390017DDF9 /* SlideView.swift */,
 				47BA4EF42A75182C00B37254 /* BaseSlideContentView.swift */,
 			);
 			path = Slide;
@@ -496,6 +499,7 @@
 				4753F5112A6807EC00332249 /* SlideContentView.swift in Sources */,
 				47F269E82A710B3600B6E2E3 /* SlideListTableViewCell.swift in Sources */,
 				47F269F02A7228D100B6E2E3 /* Photoable.swift in Sources */,
+				471C7D2C2A7378390017DDF9 /* SlideView.swift in Sources */,
 				47F26A062A72CD6D00B6E2E3 /* SlideViewAlphaChangeable.swift in Sources */,
 				F4AEBCA22A6525950047580C /* SYAlpha.swift in Sources */,
 				47F269E22A6E184A00B6E2E3 /* AlphaSettingView.swift in Sources */,
