@@ -43,7 +43,6 @@
 		F4AEBC882A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */; };
 		F4AEBC9B2A65009E0047580C /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBC9A2A65009E0047580C /* RGBColor.swift */; };
 		F4AEBCA22A6525950047580C /* SYAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA12A6525950047580C /* SYAlpha.swift */; };
-		F4AEBCA42A6525E90047580C /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA32A6525E90047580C /* Slide.swift */; };
 		F4AEBCA92A65354A0047580C /* SlideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCA82A65354A0047580C /* SlideFactory.swift */; };
 		F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCAB2A6535820047580C /* SlideCreatable.swift */; };
 		F4AEBCAE2A65478E0047580C /* SlideID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEBCAD2A65478E0047580C /* SlideID.swift */; };
@@ -107,7 +106,6 @@
 		F4AEBC872A64DD640047580C /* MyKeynoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeynoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4AEBC9A2A65009E0047580C /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		F4AEBCA12A6525950047580C /* SYAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SYAlpha.swift; sourceTree = "<group>"; };
-		F4AEBCA32A6525E90047580C /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		F4AEBCA82A65354A0047580C /* SlideFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideFactory.swift; sourceTree = "<group>"; };
 		F4AEBCAB2A6535820047580C /* SlideCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCreatable.swift; sourceTree = "<group>"; };
 		F4AEBCAD2A65478E0047580C /* SlideID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideID.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				4753F51D2A6BD76A00332249 /* Property */,
-				F4AEBCA32A6525E90047580C /* Slide.swift */,
 				F4AEBCAD2A65478E0047580C /* SlideID.swift */,
 				F4AEBCA82A65354A0047580C /* SlideFactory.swift */,
 				4753F4FA2A677DEE00332249 /* SlideManager.swift */,
@@ -502,7 +499,6 @@
 				F4AEBCAC2A6535820047580C /* SlideCreatable.swift in Sources */,
 				F4AEBC9B2A65009E0047580C /* RGBColor.swift in Sources */,
 				47F26A022A72CB3600B6E2E3 /* SlideViewTappable.swift in Sources */,
-				F4AEBCA42A6525E90047580C /* Slide.swift in Sources */,
 				4753F4F92A66C60D00332249 /* KeynoteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
