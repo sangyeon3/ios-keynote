@@ -138,8 +138,12 @@ extension KeynoteViewController: KeynoteViewDelegate {
         self.idOfSelectedSlide = slideID
         
         keynoteView.addBorderToSlide(havingID: slideID)
-        keynoteView.updateColorOf(havingID: slideID, to: UIColor(rgb: selectedSlide.backgroundColor))
-        keynoteView.updateAlphaOf(havingID: slideID, to: selectedSlide.alpha.value)
+        if let selectedSlide = selectedSlide as? Colorful {
+            keynoteView.updateColorOf(havingID: slideID, to: UIColor(rgb: selectedSlide.color))
+        }
+        if let selectedSlide = selectedSlide as? AlphaAdaptable {
+            keynoteView.updateAlphaOf(havingID: slideID, to: selectedSlide.alpha.value)
+        }
     }
     
     func slideViewDidTapped() {
